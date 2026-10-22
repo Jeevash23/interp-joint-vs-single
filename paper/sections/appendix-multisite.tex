@@ -1,0 +1,38 @@
+\paragraph{Tasks, networks and sites.}
+Tables were drawn with the generator of Studies~1 and~2 from seeds 50000--50024 (lookup) and 60000--60024 (additive),
+which no earlier analysis had used, and networks were trained by Study~2's code with its settings, including up to
+three initialisations to classify all 27 inputs with a logit margin of at least 1 (Appendix~\ref{app:trained}).
+Of the \MsNetworks{} networks, \MsCompetent{} reached this margin, \MsFirstAttempt{} at the first attempt. For the MLPs, the natural states at $A$'s site are the first hidden layer after its ReLU and those at $B$'s
+site the second, and the output is a linear function of the latter. For the transformers, the natural state at $A$'s
+site is the sum of the token and position embeddings of $a$ at position~1; an $A$-edit replaces it, the attention
+layer is recomputed with the edited position, and the last position's residual stream after attention is $B$'s site.
+Applying the propagation to the unedited states reproduces the natural states at $B$'s site exactly for every network.
+
+\paragraph{Alignments.}
+Each DAS projector is fitted at its own site with Study~2's settings (Cayley rotation initialised from the variable's
+conditional-mean contrasts at that site with seeded random completion; Adam, learning rate 0.02, 1,500 steps; the
+lowest-loss iterate), on the 486 single interchanges of its variable in which the variable changes. The mean-contrast
+alignment projects onto the conditional-mean contrasts of $A$ at $A$'s site and of $B$ at $B$'s site; the random one
+onto seeded random subspaces of rank 2. Off-target distances are divided by the root-mean-square distance between the
+natural states of distinct inputs at the site concerned.
+
+\paragraph{Development, predictions and freeze.}
+The two predictions were written, with the rest of the protocol, before any network of this study existed, and the
+time and SHA-256 of the protocol and of its predictions were recorded then. Development used tables with seeds 70--73
+in each family. All \MsDevNetworks{} development networks reached the margin; \MsDevPerfect{} of the \MsDevAlignments{} alignments passed every single
+query and none of them failed a joint query; the detection contrast at 120 calls was \MsDevContrast. DAS at the MLP's
+second hidden layer converged within about 100 steps, and longer training or a larger learning rate gave the same best
+losses on four networks; no setting was changed. The development results were appended to the protocol, which was
+frozen with the code, the final seeds and the shared Study~2 module that the code imports before any final network was trained.
+
+\paragraph{When the margin scores were fixed.}
+On 6 October 2026 (UTC), the Study~2 script that defines the unsigned score $\rho$, the signed score $\sigma$ and the
+rule $\sigma>1$ was written at 07:23 and first run at 07:24; the counts of queries flagged by the rule were added at
+07:25. Study~3's predictions were recorded at \MsPredictionsTime, its code, which computes both one-term scores, was
+frozen at 07:55, and its final networks finished training at 08:34. The alignment-level application of the rule to
+Study~3 and the breakdown by architecture were coded after that, without changing the rule.
+
+\paragraph{Verification.}
+An independent implementation in NumPy, sharing no code with the study, rebuilt every network and both sites from the
+saved weights, recomputed all \MsVerifiedDecisions{} census decisions (\MsVerifiedDiffer{} differed), and recounted
+the per-alignment failures, joint-panel failures and unexplained joint failures of the analysis.

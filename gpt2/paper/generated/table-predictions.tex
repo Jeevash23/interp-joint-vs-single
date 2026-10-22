@@ -1,0 +1,13 @@
+1 & GPT-2 Small: at most 10\% of one-site alignments that pass every single query fail a joint query & Not testable: no alignment passes every single query \\
+2 & GPT-2 Small: the margin rule flags at least half of the joint-only alignments and at most 10\% of the others & Not testable: no alignment passes every single query \\
+3 & GPT-2 Small: joint minus full-domain single detection at 120 calls below 0 & Does not hold, beyond sampling error: \ensuremath{+}0.613 [\ensuremath{+}0.582, \ensuremath{+}0.640] \\
+1 & GPT-2 Medium: at most 10\% of one-site alignments that pass every single query fail a joint query & Not testable: six alignments pass every single query (10 needed) \\
+2 & GPT-2 Medium: the margin rule flags at least half of the joint-only alignments and at most 10\% of the others & Not testable: six alignments pass every single query (10 needed) \\
+3 & GPT-2 Medium: joint minus full-domain single detection at 120 calls below 0 & Does not hold, beyond sampling error: \ensuremath{+}0.640 [\ensuremath{+}0.615, \ensuremath{+}0.660] \\
+4 & Arm b's detection contrast above arm a's at one site & Does not hold, beyond sampling error: \ensuremath{-}0.613 [\ensuremath{-}0.641, \ensuremath{-}0.581] \\
+4 & Arm b's own detection contrast at least 0 & Holds: zero to rounding (\ensuremath{-1.1\times 10^{-18}}; both tests detect every arm-b alignment) \\
+5a & Arm c: median $\|P_AP_B\|$ below 0.2 & Holds: 0.17 \\
+5b & Arm c: joint failure rate rises with $\|P_AP_B\|$ (Spearman above 0) & Does not hold, beyond sampling error: \ensuremath{-}0.31 [\ensuremath{-}0.40, \ensuremath{-}0.20] \\
+5c & Arm c's joint-only share at least arm a's & Not testable: no alignment passes every single query in either arm \\
+6a & Arm d: joint-only share above the companion study's 5.5\% & Holds, beyond sampling error: 16.5\% [10.1, 24.8] \\
+6b & Arm d: $\|P_AP_B\|$ separates joint-only alignments (area under the ROC curve above 0.5) & Holds, beyond sampling error: 0.69 [0.55, 0.82] \\

@@ -1,0 +1,67 @@
+{
+ "release": "joint-vs-single-interchange",
+ "changed_files": {
+  "studies/0-pilot/04-Results/final.json": {
+   "kind": "redacted",
+   "original_sha256": "cccfe6bdd02ac19a5931a66b0d69cb0cd317855777ba4c65ad29216d1f361eaf",
+   "release_sha256": "904df4f1dc927b2c8cf6b53dcb8b2820180bb931a47b8d07bf6c8d3ad2d559c3",
+   "redactions": {
+    "platform string": 1
+   },
+   "archive": "data/saved-outputs/study0-pilot.tar.xz"
+  },
+  "studies/0-pilot/06-Study-History/SOURCE-ENVIRONMENT-MANIFEST.json": {
+   "kind": "redacted",
+   "original_sha256": "b8576ec58df822dc015295fa71d4ca971be6b8b4bd09b74dcf3e562587009edf",
+   "release_sha256": "1dc147226d309fdcc7e49f39a23ca65542b3d0d984b3644eab20d6095aa57ec5",
+   "redactions": {
+    "AI tool": 1,
+    "platform string": 1
+   }
+  },
+  "studies/1-compiled-programs/02-Code/requirements-v2.lock": {
+   "kind": "redacted",
+   "original_sha256": "01b2e4e5e2de3e23edfc2dce00932560ab7effc90b2c93e3b010a44a946b124d",
+   "release_sha256": "762a65482bcce947440d706dad3cc1e031fe234ed0647fae002923642838ae4a",
+   "redactions": {
+    "absolute path": 2
+   }
+  },
+  "studies/1-compiled-programs/04-Results/v2/clean-environment-replay.json": {
+   "kind": "redacted",
+   "original_sha256": "21a9237fe2962d5f8c562a76ec7d85ae0a0ce4ae92e335d578c70adae319dd79",
+   "release_sha256": "84979cbb7fb467a7a826ada2139546a87a2c0f29d09105925dd582969ab72ae2",
+   "redactions": {
+    "absolute path": 1
+   },
+   "archive": "data/saved-outputs/study1-compiled-programs.tar.xz"
+  },
+  "studies/1-compiled-programs/06-Study-History/V2-SOURCE-ENVIRONMENT-MANIFEST.json": {
+   "kind": "redacted",
+   "original_sha256": "1af178d9de2430afb7579d6c95bbff38ebeeab841191ee90cf6416b6e50a5e54",
+   "release_sha256": "09b7d62cc50766ba691b92738f089a368a9e3bf6c800c6ef90db9c2562fd2ca9",
+   "redactions": {
+    "absolute path": 1,
+    "platform string": 1
+   }
+  }
+ },
+ "frozen_files_not_shipped": {},
+ "freeze_records": [
+  {
+   "path": "studies/1-compiled-programs/06-Study-History/V2-FROZEN-MANIFEST.json",
+   "base": "studies/1-compiled-programs",
+   "field": "source_sha256"
+  },
+  {
+   "path": "studies/2-trained-networks/FROZEN-MANIFEST.json",
+   "base": "studies/2-trained-networks",
+   "field": "sha256"
+  },
+  {
+   "path": "studies/3-multi-site/FROZEN-MANIFEST.json",
+   "base": "studies/3-multi-site",
+   "field": "sha256"
+  }
+ ]
+}

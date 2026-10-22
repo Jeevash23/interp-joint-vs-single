@@ -1,0 +1,31 @@
+{
+ "phase": "development",
+ "eps": 0.001,
+ "queries": 8180,
+ "disagreements": [],
+ "max_abs_margin_difference": 6.638386746260494e-05,
+ "joint_only_alignments": [],
+ "by_arm": {
+  "a": {
+   "queries": 2031,
+   "max_abs_margin_difference": 6.638386746260494e-05,
+   "disagreements": 0
+  },
+  "c": {
+   "queries": 1913,
+   "max_abs_margin_difference": 5.526383539233848e-05,
+   "disagreements": 0
+  },
+  "a_end": {
+   "queries": 2488,
+   "max_abs_margin_difference": 4.5504502267590397e-05,
+   "disagreements": 0
+  },
+  "b": {
+   "queries": 1748,
+   "max_abs_margin_difference": 4.2780947964615734e-05,
+   "disagreements": 0
+  }
+ },
+ "passed": true
+}

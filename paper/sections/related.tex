@@ -1,0 +1,76 @@
+\section{Related work}\label{sec:related}
+
+\paragraph{Interchange interventions and causal abstraction.}
+Activation patching and interchange interventions test whether internal states carry the information an
+explanation assigns to them \citep{vig2020gender,meng2022rome,wang2023ioi,geiger2021causal}. Causal abstraction
+makes the claim precise: a high-level model abstracts a network if the two agree under interventions on aligned
+variables, including interventions on several variables at once \citep{beckers2019abstracting,
+rubenstein2017consistency,geiger2025abstraction}. Whether an abstraction is exact depends on the set of
+interventions considered \citep{rubenstein2017consistency}, and a test of one variable at a time certifies a
+claim about that variable with the others marginalised \citep{geiger2022iit}. DAS learns the alignment
+\citep{geiger2024das,wu2023boundless}; its original training mixes single and two-variable interchanges
+\citep[Appendix~A.1]{geiger2024das}, and alignments are usually scored by single-variable interchange accuracy, as in
+the causal-variable track of MIB \citep{mueller2025mib} and the cause and isolation scores of RAVEL
+\citep{huang2024ravel}. RAVEL scores an alignment both by whether an intervention changes the target attribute and by
+whether it leaves the other attributes alone; the single queries in which the swapped variable keeps its value, which
+turn out to matter in Study~4, are a test of the second kind. MIB's IOI model assigns the position variable to heads
+7.3, 7.9 and 8.6 and the token variable to head 8.10 of GPT-2 Small; Study~4 tests that assignment under our
+counterfactual model rather than under MIB's own scoring. For orthogonal linear alignments at one site,
+\cref{prop:redundant} says when the multi-variable requirement adds nothing beyond single-variable tests over the full
+domain. \citet{geiger2021causal} remark informally that single interchanges establish the abstraction of their
+example, whose two variables occupy different neurons of one hidden layer and are therefore orthogonal subspaces of
+one site; \cref{prop:redundant} states the condition under which this holds.
+
+\paragraph{Explanations beyond the inputs used to find them.}
+An explanation that holds on the inputs used to find or check it can fail elsewhere. \citet{bolukbasi2021illusion}
+showed this for neuron interpretations across corpora, and \citet{friedman2024illusions} for simplified models
+fitted on one distribution and tested on systematic-generalisation splits, the same mechanism as the restricted
+alignments of Study~1. \citet{rai2026datadriven} find circuits with high in-distribution and low cross-dataset
+faithfulness, and Experiment~5 of \citet{meloux2026validating} contains an invalid abstraction that differs from
+the valid one only at a mediator value no natural input reaches. Learned alignments can also fail on held-out
+entities \citep{huang2024ravel}, and an alignment map flexible enough to fit a randomly initialised network fails on
+held-out names \citep{sutter2025nonlinear}. Failures of an abstraction can also be confined to part of the input
+space: \citet{puyin2026bucketing} split the inputs by their pairwise interchange behaviour into regions where an
+interpretation holds and regions where it fails, and \citet{pislar2025combining} combine simple causal models, each
+explaining part of the inputs, trading the share of inputs explained against interchange accuracy.
+\citet{heimersheim2024patching} recommend patching experiments whose inputs vary every hypothesised variable, and
+\citet{wu2024reply} testing on examples outside the training data. Our coverage results replicate this effect under
+exact labels, the held-out split of Study~2 asks how much it matters for single and joint tests, and Study~4's
+confirmation uses names and templates that development never saw.
+
+\paragraph{Interventions that leave the natural states.}
+\citet{zhang2024patching} note that corrupting inputs with noise moves internal states off their natural
+distribution. \citet{makelov2024subspace} show that a subspace patch can change the output through a dormant
+pathway, and \citet{wu2024reply} that faithful subspaces generally overlap directions the downstream computation
+ignores. \citet{grant2026divergent} distinguish harmless divergence from pernicious divergence, which uses hidden
+pathways or causes dormant behavioural changes that appear only in other contexts, and propose checking interventions
+in other contexts; our transported-divergence panel follows their Appendix~A.3, and their characterisation of sets
+closed under coordinate patching (Theorem~A.2) is the closest formal precedent for \cref{prop:redundant}.
+\Cref{cor:irreducible} connects joint tests to this work: they can only expose single edits of both variables whose
+effect is dormant in a single test.
+
+\paragraph{Interactions between interventions.}
+The closest theory to \cref{prop:margin} is that of \citet{vaidyanathan2026mediators}. They show that the effect
+activation patching attributes to a component is its pure effect plus an interaction term, which measures how far
+that effect depends on the state of the rest of the network. To second order, the interaction term is the mixed
+second derivative of the downstream map along the two displacements that the change of input causes, that of the
+component and that of the rest of the network, so this term vanishes where the map is locally affine. Their setting
+is the patching of whole components, such as attention heads at different sites, rather than of subspaces aligned
+with the variables of a high-level causal model. The conditions also differ: their interaction term needs curvature
+as well as displacement, whereas \cref{prop:margin} compares a joint query with a single query it reduces to, so that
+a first-order drop of margin is enough, provided the other edit's miss is large compared with that query's margin.
+\Cref{sec:compiled} discusses their remark that compiled networks are piecewise affine.
+\citet{erramilli2026tomography} treats interventions as designed measurements of a model's effects and interactions;
+in GPT-2 Small on the indirect-object task, the interaction between name-mover and negative name-mover heads is the
+largest held-out term of the three pairs of head groups tested.
+
+\paragraph{Evaluating validation tests against known answers.}
+Compiled and trained networks with known circuits are used to evaluate interpretability methods
+\citep{lindner2023tracr,conmy2023acdc,gupta2024interpbench,thurnherr2024tracrbench}. \citet{meloux2026validating}
+benchmark metrics for causal abstraction on ten simulated systems with known valid and invalid explanations,
+including a Tracr system; their metrics sample interventions of several cardinalities, the faithfulness-aware ones
+also overwrite unmapped variables with sampled noise, and they argue that interventions on several nodes catch
+interactions that single checks miss. The complement resampling of Study~1 follows causal scrubbing
+\citep{chan2022scrubbing}. Several distinct explanations can fit the same network
+\citep{meloux2025identifiable,chen2026rome}, which is why our labels concern one precise claim rather than the
+uniqueness of any circuit. We reran two published demonstrations as checks (\cref{app:reproductions}).

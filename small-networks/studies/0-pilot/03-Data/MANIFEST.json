@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-29",
+  "status": "finite deterministic generated benchmark census",
+  "program_families": ["parity", "conjunction"],
+  "legal_input_domain": "all 8 Boolean triples (a,b,n)",
+  "nuisance": "n is retained from the recipient during internal interventions",
+  "explanation_classes": ["direct", "rotated", "hidden", "conditional_hidden"],
+  "source": "02-Code/study.py and frozen protocol; no external examples",
+  "final_records": "04-Results/final.json",
+  "development": "equation checks; no independent sampled development programs",
+  "exclusions": []
+}

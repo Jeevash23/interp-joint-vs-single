@@ -1,0 +1,150 @@
+\section{Study 2: trained networks}\label{sec:trained}
+
+\subsection{Networks and alignments}
+
+Study~2 uses the same two task families, with 25 new tables per family, and four architectures for each table:
+transformers with model width 16 or 64 and MLPs with hidden width 16 or 64, \TrnNetworks{} networks in all. Each
+transformer reads \texttt{[BOS, a, b, n]} with learned token and position embeddings and has one causal attention
+layer with two heads and pre-LayerNorm, an MLP four times as wide as the model, and a final LayerNorm; its site is
+the residual stream at the last position after attention, as in Study~1. Each MLP reads the one-hot input and has
+two hidden ReLU layers; its site is the first hidden layer after the ReLU. Networks were trained in double precision
+on all 27 inputs to classify the table value, and had to classify every input correctly with a logit margin of at
+least 1 (Appendix~\ref{app:trained}). All \TrnCompetent{} networks met this standard, \TrnFirstAttempt{} at the first
+of up to three initialisations.
+
+Each network received six orthogonal alignments: DAS with rank 1, 2 or 4 per variable, trained on the 972 single
+interchanges of the full-domain single panel; DAS with rank 2 trained only on the 144 queries of the restricted
+single panel; the conditional-mean contrasts of $A$ and $B$, made orthogonal by symmetric orthogonalisation; and
+random subspaces of rank 2. A full-domain DAS alignment is therefore scored on the queries it was trained on, and
+passing every single query measures how well it fits them; a post hoc held-out split below asks what this does to
+the comparison. For every alignment we took the census of all 1,458
+single and 19,683 joint queries. The protocol, code and seeds were frozen at \TrnFreezeTime, after development on
+four tables per family and before any final network was trained; the protocol records the development results.
+Unlike Study~1, there is no validity label independent of the tests, and the study measures how single and joint
+tests relate to each other.
+
+\subsection{Results}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}l l c c c c c c@{}}
+\toprule
+& & \multicolumn{2}{c}{Failure rate (\%)} & Irreducible & \multicolumn{2}{c}{Pass all singles} & Detection \\
+\cmidrule(lr){3-4}\cmidrule(lr){6-7}
+Architecture & Family & singles & joint & share (\%) & $n$ & fail a joint & joint $-$ singles \\
+\midrule
+\input{generated/table-trained-cells.tex}
+\end{tabular}
+\caption{Study~2, full-domain DAS alignments (ranks 1, 2 and 4; 75 per row). Failure rates are means over
+alignments of the failure rate in the full-domain single panel and the joint panel. The irreducible share is the
+fraction of joint-panel failures that do not trace to a failing single query on a natural recipient. \emph{Pass
+all singles} counts only these full-domain DAS alignments: how many fail none of the 1,458 single queries
+(\TrnPerfectDas{} in all) and how many of those fail a joint query (\TrnJointOnlyDasCount{} in all). The
+counts in the text (\TrnPerfect{} and \TrnPerfectJointFailWord) also include mean-contrast alignments, and
+\cref{tab:multisite}, unlike this table, counts all alignment kinds. The last column is the mean difference in
+detection probability between a joint test and a full-domain single test of 120 model calls.}
+\label{tab:trained}
+\end{table}
+
+\paragraph{Linear alignments in trained networks are approximate, and the condition holds on the whole joint panel.}
+The full-domain DAS alignments fail on average \TrnSingleRate\% of full-domain single queries and \TrnJointRate\% of
+joint-panel queries (\cref{tab:trained}); joint failure rates track single failure rates closely and are on average
+a little lower (\cref{fig:trained}a). Of the \TrnCandidates{} alignments, \TrnPerfect{} pass every single query:
+\TrnPerfectMlp{} in MLPs and \TrnPerfectTransformer{} in transformers, all of the latter on additive tasks. No
+alignment of a lookup-task transformer passes every single query; the best of a network's alignments still fails
+\TrnLookupTransformerBest\% of full-domain single queries (median over networks). What follows about alignments that
+pass every single query therefore rests mainly on MLPs, on \TrnPerfectTransformer{} alignments for transformers, and
+on none for lookup-task transformers. No single edit that changes a variable lands on its target: post hoc, the smallest distance between such
+an edit and its target, relative to the typical distance between natural states, is \TrnLandMinAll{} over all
+alignments and \TrnLandMinPerfect{} over the \TrnPerfect{} that pass every single query. Both single edits of a
+joint-panel query change their variable, so the condition of \cref{cor:irreducible} holds for every joint-panel
+query of these \TrnPerfect{} alignments.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig-trained.pdf}
+\caption{Study~2. (a) Failure rates of the \TrnDas{} full-domain DAS alignments in the full-domain single panel and
+the joint panel. (b) Expected share of these alignments detected by a test drawn from each panel, at budgets of 12 to
+120 model calls, computed from the census. Every curve is capped at \TrnCeiling, because \TrnNeverFail{} alignments
+pass every query of the full-domain single and joint panels.}
+\label{fig:trained}
+\end{figure}
+
+\paragraph{Joint-only failures are rare and sparse.}
+Even so, only \TrnPerfectJointFailWord{} of the \TrnPerfect{} fail a joint query: \TrnJointOnlyDasCount{} DAS alignments of
+rank 2 and one mean-contrast alignment, \TrnJointOnlyMlp{} of them in MLPs and \TrnJointOnlyTransformer{} in a
+transformer. Post hoc, each fails between \TrnJointOnlyMinFailures{} and
+\TrnJointOnlyMaxFailures{} of the 19,683 joint queries. Of the seven, \TrnJointOnlyPanelCount{} fail queries of the
+joint panel, at most \TrnJointOnlyMaxPanelShare\% of them, and \TrnJointOnlyOutsidePanel{} fails only joint queries
+in which one variable keeps its value. A joint test of 120 calls would detect one of the seven with probability \TrnJointOnlyDetect\% on
+average and at most \TrnJointOnlyDetectMax\%. How far their single edits move from their targets does not single them
+out: the median relative distance is \TrnJointOnlyOffRange{} for these seven and \TrnPerfectOffRange{} for the
+alignments that fail no joint query.
+
+\paragraph{Few joint failures are irreducible.}
+Across the full-domain DAS alignments, \TrnIrrShare\% of joint-panel failures are irreducible; all but
+\TrnIrrInPerfect{} of the \TrnIrrChecked{} occur in alignments that also fail single queries. Per joint query the
+irreducible rate is \TrnIrrRate\%, against a single failure rate of \TrnSingleRate\%. Post hoc, each irreducible
+failure has both single edits off their targets, the nearer at a relative distance of at least \TrnSmallestOff. In
+the prespecified exploratory analysis, the larger of the two distances separated irreducible failures from passing
+joint queries slightly better than the smaller one (area under the ROC curve \TrnAucMax{} against \TrnAucMin),
+contrary to the protocol's expectation; the size of the divergence predicts these failures only weakly.
+
+\paragraph{The signed margin score picks out the joint-only failures (post hoc).}
+For the \TrnMbQueries{} joint-panel queries of the full-domain DAS alignments whose two reduced single queries pass,
+\TrnMbIrreducible{} of them irreducible failures, we computed the first-order changes of \cref{prop:margin}
+(\cref{eq:split} holds to \TrnMbIdentity). The unsigned score $\rho$ was the one we specified first; the signed score
+$\sigma$ was added to the same analysis before either had been computed, both were computed in one run on these data,
+and we chose $\sigma$ as the main score afterwards, because \cref{prop:margin} says only drops can cause failures.
+Ranking the \TrnPerfect{} alignments that pass every single query by their largest $\sigma$ over all 19,683 joint
+queries puts the \TrnPerfectJointFailWord{} joint-only ones at positions \TrnMbRanksSigned{} (area under the ROC curve
+\TrnMbAlignAucSigned), and the rule $\sigma>1$ flags \TrnMbRuleFlagged{} of the \TrnPerfect{} alignments, all of them
+joint-only; it misses \TrnMbMissed, the only transformer among the seven. Ranked by $\rho$, the seven are at positions
+\TrnMbRanks{} (\TrnMbAlignAuc). Query by query the order reverses: as a score for the failures, $\sigma$ has an area
+under the ROC curve of \TrnMbAucSigned{} and $\rho$ of \TrnMbAuc, against \TrnAucMin{} and \TrnAucMax{} for the two
+distances. The first-order change has the sign of the actual change in \TrnMbSign\% of cases but in only
+\TrnMbSignIrr\% for the failures, and a failure whose first-order change points the wrong way in either ordering gets
+a negative $\sigma$; $\rho$ ignores the sign. The rule $\sigma>1$ is precise but incomplete: of the queries it flags,
+\TrnMbRuleTP{} fail and \TrnMbRuleFP{} pass, and it misses \TrnMbRuleFN{} failures. For the MLPs, the Lipschitz bound
+of \cref{prop:margin}(b) shows without running them that \TrnMbLipCertified{} of the \TrnMbLipQueries{} joint-panel
+queries (\TrnMbLipShare\%) pass, and none of them fails.
+
+\paragraph{At the prespecified costs, joint tests detect fewer failing alignments than single tests.}
+The useful comparison is what a joint test adds to a single one. After a full-domain single test of 120 calls, a
+further 120 calls spent on joint queries detect a further \TrnAddonJoint\% of the \TrnDas{} full-domain DAS
+alignments, and the same calls spent on more single queries a further \TrnAddonSingle\% (post hoc). Head to head,
+with three model calls per single query and four per joint query, the prespecified convention, joint tests detect
+fewer alignments than full-domain single tests at each budget in \cref{fig:trained}b: joint minus single detection
+probability at 120 calls is \TrnContrastOneTwenty, with a 95\% interval of \TrnContrastOneTwentyCI{} from 10,000
+resamples of networks within each architecture and family, \TrnContrastTwelve{} at 12 calls, and negative in every
+cell of \cref{tab:trained}. Post hoc, with the same resampling, it is \TrnEqualQueries{} \TrnEqualQueriesCI{} at equal
+numbers of queries (30 of each), positive in \TrnEqualPositiveCells{} of the eight cells, and \TrnCached{}
+\TrnCachedCI{} if natural states are cached so that every query costs one call (120 of each), positive in
+\TrnCachedPositiveCells{} cells and within sampling error of zero. Minimal-pair
+singles detect fewer failing alignments than full-domain singles (\TrnDetectMinimalOneTwenty{} against
+\TrnDetectSingleOneTwenty{} at 120 calls), since a minimal pair never changes the other variable and so cannot reveal
+an edit that disturbs it. Restricted singles detect \TrnDetectRestrictedOneTwenty. Every detection curve is capped at
+\TrnCeiling, because \TrnNeverFail{} of the \TrnDas{} alignments pass every query of the full-domain single and joint
+panels, which contain the queries of the other panels.
+
+\paragraph{Held-out single queries (post hoc, exploratory).}
+Because a full-domain DAS alignment is trained on the full-domain single panel, a single test scores it on its own
+training data, while every joint query is new to it. To see what this does to the comparison, we refitted the
+full-domain DAS alignments of every network with Study~2's settings on a random half of those queries (243 per
+variable) and took their census. The refitted alignments fail on average \TrnHoTrainRate\% of the single queries they
+were trained on, \TrnHoHeldRate\% of the held-out ones and \TrnHoJointRate\% of the joint panel. Held-out single
+queries are thus slightly harder to pass, and against them joint tests fall a little further behind: at 120 calls,
+joint minus held-out single detection is \TrnHoContrast{} (95\% interval \TrnHoContrastCI; \TrnHoTrainContrast{}
+against the training half) with three and four calls per query, \TrnHoEqual{} at equal numbers of queries and
+\TrnHoCached{} with cached natural states. After a held-out single test of 120 calls, 120 more calls detect a further
+\TrnHoAddonJoint\% of the alignments with joint queries and \TrnHoAddonSingle\% with held-out single queries. Scoring
+single tests on their training queries therefore did not hide an advantage of joint tests. Of the \TrnHoPassChanged{}
+refitted alignments that pass every single query in which the swapped variable changes, \TrnHoPassBothFailJoint{} fail
+a joint query.
+
+\paragraph{Restricted fitting.}
+DAS alignments trained only on the restricted inputs fail \TrnCovRestricted\% of restricted single queries and
+\TrnCovFull\% of full-domain ones. Of the \TrnCovCandidates, \TrnCovPassRestricted{} pass every restricted query, and
+all \TrnCovFailFull{} fail some full-domain query.

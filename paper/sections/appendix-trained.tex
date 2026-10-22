@@ -1,0 +1,33 @@
+\paragraph{Tasks and networks.}
+Tables were drawn with the generator of Study~1 from seeds 30000--30024 (lookup) and 40000--40024 (additive), which
+no earlier analysis had used. The output is a class over the distinct values of the table. Transformers use two heads
+of width $d/2$, LayerNorm before the attention and MLP sublayers and before the unembedding, and an MLP of width $4d$;
+the attention mask is causal, so the last position reads the whole sequence. Networks were trained in double
+precision on the full batch of 27 inputs with AdamW without weight decay, for 3,000 steps, with learning rate
+$3\times10^{-3}$ for transformers and $10^{-2}$ for MLPs. The initialisation seed was ten times the table seed plus
+the attempt number; up to three attempts were allowed, and the first network that classified all 27 inputs with a
+logit margin of at least 1 was used. All \TrnCompetent{} networks passed, \TrnFirstAttempt{} at the first attempt.
+
+\paragraph{Alignments.}
+DAS parameterises an orthogonal matrix by a Cayley transform of a skew-symmetric matrix, initialised from the
+orthonormalised conditional-mean contrasts of $A$ and $B$ completed with seeded random directions, and minimises the
+cross-entropy of the counterfactual class over its training interchanges with Adam (learning rate 0.02, 1,500 steps),
+keeping the lowest-loss iterate. The mean-contrast alignment takes, for each variable, the singular vectors of the
+centred conditional means with singular values above $10^{-6}$ of the largest, and makes the two sets orthogonal by
+symmetric orthogonalisation. Off-natural distances are Euclidean distances between an edited state and the natural
+state of the input it simulates, divided by the root-mean-square distance between distinct natural states of the
+same network.
+
+\paragraph{Development and freeze.}
+Before development, a small exploratory run trained twelve MLPs on lookup tables of Study~1 and found no joint-only
+failures among their alignments; none of its networks or tables is reused.
+Development used tables with seeds 50--53 in each family and fixed every setting above. It showed that alignments in
+trained networks are approximate, that weight decay made them worse, and that longer DAS training did not improve
+them; the primary quantities were therefore defined for approximate alignments. The development results, including
+the sign of the primary contrast, are recorded in the protocol, which was frozen with the code and the final seeds
+before any final network was trained.
+
+\paragraph{Verification.}
+An independent implementation in NumPy, sharing no code with the study, rebuilt every network from its saved weights,
+confirmed that all of them classify the 27 inputs correctly, recomputed all \TrnVerifiedDecisions{} census decisions
+(\TrnVerifiedDiffer{} differed), and recounted the per-alignment quantities of the analysis.

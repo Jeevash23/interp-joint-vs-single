@@ -1,0 +1,736 @@
+{
+ "release": "joint-and-single-interchange-gpt2",
+ "changed_files": {
+  "Makefile": {
+   "kind": "replaced",
+   "original_sha256": "91663ae0b4ade59c5cdbca4c4c03392a853561cf311e8d9542e8795e3554ec5e",
+   "release_sha256": "6d2f8df4b195075080aacb8d97ff2525699506975e5c3f871792894dd35b824e",
+   "frozen_in": [
+    "study/freeze.json"
+   ],
+   "reasons": [
+    "this release's Makefile replaces the project's; the original is kept, redacted, as provenance/Makefile-at-freeze"
+   ]
+  },
+  "RESULTS.md": {
+   "kind": "redacted",
+   "original_sha256": "cada92eb900d2d6dfdc6a5ffc91dc265d49c6ae51090e654ba627f8ebdafe8e9",
+   "release_sha256": "5e1e1d0d82aa1963029b0c1e337729d823f1b255266c7f162bd3db2b641f84b7",
+   "redactions": {
+    "approval wording": 1,
+    "machine details": 1
+   }
+  },
+  "paper/generated/numbers.tex": {
+   "kind": "redacted",
+   "original_sha256": "9467287f8e90ffec69b3af1dfddb4a1595778884cff2221e11219d9618ac6bfc",
+   "release_sha256": "2f56bfad0ac72ece5777d08f040c3dda420356f040c3b4375dd5a2f0e40432c0",
+   "redactions": {
+    "machine details": 1
+   }
+  },
+  "paper/make_numbers.py": {
+   "kind": "adapted and redacted",
+   "original_sha256": "3c52cc22c46b49960682f3664aa2ffbe60d3753f3dffbc74f6c468d39aa45ac2",
+   "release_sha256": "9c30fb0affb062a272e26283255251e4461f98fff414f313a227e81ba0b05176",
+   "redactions": {
+    "machine details": 3
+   },
+   "reasons": [
+    "the companion study's files are shipped in reference/joint-vs-single-interchange"
+   ]
+  },
+  "posthoc/verify.py": {
+   "kind": "adapted",
+   "original_sha256": "a5f723a1f26e748e8f861449347394a2ef054c55bb135a6e3c35fbae23fef006",
+   "release_sha256": "8caa7f2c725abe87bd2421823ba36c6c43e4a030cac8c0b34a0944dbffd45ccc",
+   "reasons": [
+    "the GPT-2 Small checkpoint comes from MODELS_DIR (default models/ in the release; tools/get_models.py)"
+   ]
+  },
+  "provenance/Makefile-at-freeze": {
+   "kind": "redacted",
+   "original_sha256": "91663ae0b4ade59c5cdbca4c4c03392a853561cf311e8d9542e8795e3554ec5e",
+   "release_sha256": "799ded760148747e4001cbcf0295d464e22fc1f0babc5735696fc47932c050ed",
+   "source_path": "Makefile",
+   "frozen_in": [
+    "study/freeze.json"
+   ],
+   "redactions": {
+    "environment path": 1,
+    "approval wording": 1
+   }
+  },
+  "study/AMENDMENT-2-RECORD.json": {
+   "kind": "redacted",
+   "original_sha256": "517cdface9be035b8e1ba80cde4d295902221f8a06cc12c73daf2042d4d3c66d",
+   "release_sha256": "bb2f81bbc6d5bee80a947233197b7acced1aa5c71e7a93fbf634b609e246ae33",
+   "frozen_in": [
+    "study/freeze.json"
+   ],
+   "redactions": {
+    "approval wording": 1,
+    "machine details": 1
+   }
+  },
+  "study/CONFIRMATION-NOTES.md": {
+   "kind": "redacted",
+   "original_sha256": "faee0a79d4b5e6d26131f67c82b36272278f59d0bc6eb6c1c5d4d109d7cbb65c",
+   "release_sha256": "33f0092a840af3fdc84d66dcf4a256e7b9b42e5ed208a04e2ebe6a9dfe035633",
+   "redactions": {
+    "time zone": 1,
+    "local clock time": 38,
+    "related write-up": 2,
+    "machine details": 3
+   }
+  },
+  "study/DEVELOPMENT-NOTES.md": {
+   "kind": "redacted",
+   "original_sha256": "f7a4843292821d245605005b6fc56e4f306dfa026ecfcd231bec1a5ae8cefbad",
+   "release_sha256": "8a215eaab5fca2d37a8966000a0b67e907991edcd084eb58583331d3a51adde1",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "time zone": 1,
+    "local clock time": 41,
+    "approval wording": 10,
+    "machine details": 3
+   }
+  },
+  "study/PREDICTIONS-BIGGER.md": {
+   "kind": "redacted",
+   "original_sha256": "daa0aca51b41ed42f15e32564d4942b97f57c8d2b63977e6fa472922f4d6d586",
+   "release_sha256": "79fd6ef582302ce0b8ffc3647ad01ea5c9f45bf4c97ef13326493c687b86e11c",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "machine details": 1
+   }
+  },
+  "study/PREDICTIONS-RECORD.json": {
+   "kind": "redacted",
+   "original_sha256": "e0448a4ed7b0dc376380824a5bfedd1d785ca9b83549ab7a994a173e0f4a2e37",
+   "release_sha256": "d335f63ab0c4b661eebda45fc1da734622327a22108fe1b249ac16c00e1086bd",
+   "frozen_in": [
+    "study/freeze.json"
+   ],
+   "redactions": {
+    "approval wording": 2
+   }
+  },
+  "study/PREDICTIONS.md": {
+   "kind": "redacted",
+   "original_sha256": "90cd97e55225b9a4df36af2111c0e3f9a84d3e911ce4a56ed18134c65bc12b20",
+   "release_sha256": "bccb7715ece7a0e007dfcf28a1e85a7cf9a5eb52be2805e9b8c91f3e1219d85c",
+   "frozen_in": [
+    "study/freeze.json"
+   ],
+   "redactions": {
+    "approval wording": 1
+   }
+  },
+  "study/PROTOCOL-approved-2026-10-17.md": {
+   "kind": "redacted",
+   "original_sha256": "db98ec1ee70de9e128294ff7fcedbdf4ea7244acd88c5ecc32420039d3032fe5",
+   "release_sha256": "255ea28de2d6f6e45b56a56139c1a6ede411e355e3c3660107f50d213d1045c1",
+   "frozen_in": [
+    "study/freeze.json"
+   ],
+   "redactions": {
+    "companion project": 1,
+    "local clock time": 2,
+    "approval wording": 4,
+    "related write-up": 1,
+    "machine details": 1
+   }
+  },
+  "study/PROTOCOL.md": {
+   "kind": "redacted",
+   "original_sha256": "e47ea5d1bae337505a861fe01e119ad8f3625472889029cf90e7d31da45bd3cb",
+   "release_sha256": "322d12c6564d719d8b8fdc22d3dc59743b3d415b6c494122c6e4be44c8c09ddf",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "companion project": 1,
+    "local clock time": 2,
+    "approval wording": 8,
+    "related write-up": 1,
+    "machine details": 7
+   }
+  },
+  "study/cloud/ai10_modal.py": {
+   "kind": "adapted and redacted",
+   "original_sha256": "846e3c75cd97dd0375d0f74832af665840465727d2e38e148b4ccb8c3975998a",
+   "release_sha256": "dbf992ffc271bb6bb5965d5de519488f8cb3f48bd88dd9718562ad970b4e203b",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "connection details": 2,
+    "machine details": 1
+   },
+   "reasons": [
+    "pyproject.toml and uv.lock are at the release root"
+   ]
+  },
+  "study/cloud/cloud_jobs.py": {
+   "kind": "redacted",
+   "original_sha256": "25c9dfcc5a356b570b3149e3a18a30f1d759d3ee793c0b9f5edf189785c92af3",
+   "release_sha256": "f6824cff6ae50e8f81abdb5e843b6e12bd379b43313ab29acff09c304ab91434",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "machine details": 3
+   }
+  },
+  "study/cloud/run_stage.sh": {
+   "kind": "redacted",
+   "original_sha256": "359cb418c9c857b9e27cea457d5d7e0c7b70d1a1180d5525ade07e15f9d82afd",
+   "release_sha256": "5489ed109a42717bbbdfcf5ff4b513111f9fce8726d64bada0e6f299dc5a2c4b",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "connection details": 1
+   }
+  },
+  "study/cloud/test_cloud.py": {
+   "kind": "redacted",
+   "original_sha256": "05506c9d29da2c2d3ed9afc59b88cd3f3718eeea0e2b0f5cfa08c4182e3f554e",
+   "release_sha256": "81d1222a0ecf1d780d89e4a8999e3f2ff0a26c5a627cd7f796d60725f4a92fda",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "machine details": 1
+   }
+  },
+  "study/code/ai10_common.py": {
+   "kind": "adapted and redacted",
+   "original_sha256": "3cf40511da863d7c1c9c4f78c1534878e1a7306c9689476da235436ed6c12376",
+   "release_sha256": "2b3ad29adf50d0c9b0844cf665c972a024a1b3d4787f94838d72d2003d981fcc",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "approval wording": 1
+   },
+   "reasons": [
+    "frozen-file checks accept the changes documented in release-changes.json",
+    "the GPT-2 Small checkpoint comes from MODELS_DIR (default models/ in the release; tools/get_models.py)",
+    "the companion study's files are shipped in reference/joint-vs-single-interchange"
+   ]
+  },
+  "study/code/freeze.py": {
+   "kind": "redacted",
+   "original_sha256": "4166240211e3ab413800a270ae6f1fd1f9a8f18d33049183c9cdb08efb167384",
+   "release_sha256": "b314361f188e18653a3ff8eec0e133b2c51e4d4295a698815b246aad282c5182",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "approval wording": 3
+   }
+  },
+  "study/code/gpu_lock.py": {
+   "kind": "adapted",
+   "original_sha256": "b3900c64d1d0a0f5b68eed970289913f3b8bf8c0a231f93ff26357ced2a08f2d",
+   "release_sha256": "ca8b3f95b5d5132b20e28cb178923229dc9ad9525b14e6ac8c9839f9ef14ec5f",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "reasons": [
+    "the GPU lock file comes from GPU_LOCK (default gpu.lock in the release root)"
+   ]
+  },
+  "study/code/run_study.py": {
+   "kind": "redacted",
+   "original_sha256": "c90dff1302035712fbbe832c906498cf1a2d6a9e67e4fee9489522ae228c5b3a",
+   "release_sha256": "83881abab89efe972360f985bb902304a8256685d01d0ad0ab224a8c54d6c67b",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "approval wording": 1
+   }
+  },
+  "study/config.json": {
+   "kind": "redacted",
+   "original_sha256": "06a3fb6fe67042154d61b753a8ad4d5e4b67d95ca74480d2466cd0d21b77d1b8",
+   "release_sha256": "ce8283d60f6689af693054a2cae3e03aed245a70b0256b066e9e560a0141dfb7",
+   "frozen_in": [
+    "study/freeze.json",
+    "study/AMENDMENT-2-RECORD.json"
+   ],
+   "redactions": {
+    "environment path": 1
+   }
+  },
+  "study/results/cloud/billing-watch.jsonl": {
+   "kind": "redacted",
+   "original_sha256": "e677f6f58c51f10c952f8ab22f5c5c315c9fb61569a4fee786c30663bf62f4af",
+   "release_sha256": "8df79fc28ffe3170693aeff3934509ea515c00d4d46252b3423b4359775c2fa8",
+   "redactions": {
+    "Modal object id": 3
+   },
+   "archive": "data/saved-outputs/study-results.tar.xz"
+  },
+  "study/results/cloud/check.json": {
+   "kind": "redacted",
+   "original_sha256": "877c03bd924ab87f88199549bb18fec86ba10bf315a7bfb9a8932be3c427436b",
+   "release_sha256": "a21dbe5bce8a705e48d65b31601a159e9dfc8fe0dc4a86fcca7b3c4a9d87dbad",
+   "redactions": {
+    "machine details": 1
+   },
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "frozen_in": [
+    "study/freeze.json"
+   ]
+  },
+  "study/results/cloud/final-spend.json": {
+   "kind": "redacted",
+   "original_sha256": "cbb7a51241106b58eb44f1e01528bdb2e19a2d2c197c2307648c13536588537b",
+   "release_sha256": "0dbd1e029cc419b5983f7820f17ac0c22e5482b058be296284a81cab0424906c",
+   "redactions": {
+    "local clock time": 1,
+    "Modal object id": 3
+   },
+   "archive": "data/saved-outputs/study-results.tar.xz"
+  },
+  "study/results/cloud/stage-log.jsonl": {
+   "kind": "redacted",
+   "original_sha256": "acd11f747fc68ae819e9a66bd47d70e8645e4f1a28c2b9da564c1167bb6a7c9d",
+   "release_sha256": "d7737f6e7dbe6113f40994ab503527f40878675a0143f6b9e9ce05a07dd429d4",
+   "redactions": {
+    "Modal object id": 3
+   },
+   "archive": "data/saved-outputs/study-results.tar.xz"
+  },
+  "study/results/runs/confirmation/000-Maria-Betty-Mike/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "6135c4f4095d447652d406d03001c1afa57f27d15d6cd5611df521738ff3bbf9",
+   "release_sha256": "7fc031826fc6498e98dcd1418c9d395cfd27e032165ad369850aabe332f26221",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/013-Sharon-Larry-Leo/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "a472752f0362439383f45e25044de7eed99c35885ea3147f414440817de07c6d",
+   "release_sha256": "0cf020b8f9f76cb47c6728658a881b7163976436eacbe14482ba577c35b6f321",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/015-Grace-Greg-Pat/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "73cb27f80c6466a27843887cc3e9b2be4d1d00200699a30bab6ac5d519c1f725",
+   "release_sha256": "111b9395d40d3af76ef10a2a51105cf724ccd785efd13bc4d516e9479d35362d",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/016-Sam-Chris-Megan/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "d86a61b4789a602244118b30fe54ade5d15632e5fe3cda20c276738a82721407",
+   "release_sha256": "a768f9cb9c80a8da896accf0c2b188373cbb973896908f1d242df90ac1a1e647",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/021-Walter-Edward-Julia/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "4638b550d9a8c295d05cac15a10d77f4396e0703f7172f49b7e9bb0be53dc52a",
+   "release_sha256": "c5ac6216c26c2d63ce9a5b9e5e02a4c6989599aca6864352fdc972eecbd99846",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/024-Tim-Ryan-Henry/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "76a7184e1b1929764f073a957c49108c4647b5b88f641b864ec80587dc46212d",
+   "release_sha256": "d603b6df8bcd0e0ced3ff013c74edd6c00579e904a729862d65bb5fba3e208e4",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/057-Diana-Steve-Jordan/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "cc7f7c1cf48c7acc66451e565b6fc34e83bbcde27903ed6e5fea194bc24f17d2",
+   "release_sha256": "770a0a872070110f0eb68808386e6c31c3bb8d1865ac143fc0de2e5a96ebac52",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/062-Ellen-Grace-Jack/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "95ef890f478383dc50008329ae750a9d1100eb9531a1d4710e3348be5a4a7701",
+   "release_sha256": "f7f34877f04bfafe53f63a77cdfffd5bc31b47fd071e5480cc274a3dbcfc23fd",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/066-Ben-Jacob-Ray/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "db560fb342c9713f39614ec10874e4fd5337df29fa1970784a7deadf8c518cf3",
+   "release_sha256": "930d6b4e72be458745bb15d9fb4e5e1c37e7f3be8bf857fddb9a73ac2fb769ec",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/078-Greg-Scott-Linda/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "22b0a7365b3304c0c95a4daecefa93bb410b78b919d873fdafe52e3062e1c020",
+   "release_sha256": "4978b89fec1761ee25e5ab0172d7cc8b98d7a5decd324a7331d12e4b92ffe2d0",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/083-Donna-Steven-Emily/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "443835e5fc21a49e740fb42f709739a30a3894a6255982ab88f3c7325049485b",
+   "release_sha256": "46d8d3dd62826b27f5e668e58a8176f8e142690db49ece3f2e417c55cf89903c",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/089-Rebecca-Joseph-Jake/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "f3079844a9af57a0a15b9939663c11c5521f1739bd56afb0cee7ac0dd0ef7e7b",
+   "release_sha256": "8a38a0a4d56b1fe91bdbf2e605f7af7faa30a892ef03b5195cd2cd4d61b3303a",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/095-Maria-Martin-Nick/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "7058d5f49c7497955d07bebcf93a52e6e48fcbd1dd707057b7a231233f198ef9",
+   "release_sha256": "daed2ceca3b5b16676e0a32c147455234dde0a31fbbe67ad132a2b9bc59ff156",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/096-Greg-Hannah-Sandra/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "130517aec49c4069dcd324a603b34db962bb6452ad180683c966592afd3c623f",
+   "release_sha256": "06e876bc6775d6d4d664e743afdc5c8e10ec7538059359fda94ae3330cb1c97b",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/100-Harry-Jack-Barbara/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "743582f51d09fa8c3c2dabe18c49eab803dd2f546fb172d1e36a3bc5f8a955ad",
+   "release_sha256": "4932530a5a77fc17c9a36a1b5f680bd3db5ec51339312bb094429d93cd126bab",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/101-Megan-Roger-Jessica/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "293b8d2ec9459c8e80205de6a2d4bfe2e295324f60a76145ae54471f0293ba96",
+   "release_sha256": "01c2f6a591a6f845ea042c551e3d8dc58e346cf3fad1c09b8a2e923e90f48ce1",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/105-Andrew-Ruth-Steven/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "6b922d3effae6ee1ca7bcaa4fa386baf609a17e0d2cd731e328a30193d6e426c",
+   "release_sha256": "320d6d8c6eaf74aa9ab59743eca0b9d8e40d66b8984ec877b93ae8a0e403d38d",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.58 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/111-Henry-Rachel-Max/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "b71d916b302c2a1fdf7739756ba7260723e6fd86d2500227d6c9f22015cf373a",
+   "release_sha256": "c13b81a2873851c8a843af9f5d231f51f675664ca7314ed6edf2f278e653f2e9",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/118-Oliver-Joyce-Thomas/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "bf312535169500f227b79147df15fc38fa805a7f7f13f9d2d3281002314d4872",
+   "release_sha256": "150fa5d90d6db38d61508ea0787194fed05942143f3ce51c32824b02fe5b6bbb",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/120-Gary-Chris-Thomas/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "d73a602e49be3443d70acbe0296676f0847c6da9fc2e9260c319e43f18a27d51",
+   "release_sha256": "94d1c7268daf26ec34db399a48cf22207bbe0813fbf0f85e4d0f0270a3e5151a",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/123-Jessica-Charles-Adam/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "d78eb9853acca90d87bf643993db4b05d6176d1cf6120dbaf25a7d23d07fdbf9",
+   "release_sha256": "39299a255747299973d625a9ab5a69cf65b1fb27168daa23446c5eb6991583b8",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/127-Jake-Richard-Martin/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "2da8370330c8d1d5ef341a2c3b9ff4662ecc3095a07186422f022888fa9e10a9",
+   "release_sha256": "847506f4e3b77b307067a16aa81803eb41a6ad80ff838b64a217b9300618f68b",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/136-Rose-Hannah-Andrew/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "868e8492b579939f56896fd4d16208237548fdc6f465a730c8df563f86c43dfd",
+   "release_sha256": "c145ce2c853fc689a7fd829f20b36fd23a41bb7f8946dae76723eda30fcd396c",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.58 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/140-Jordan-Leo-Larry/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "03b31c6449cbf2b749d31f5d5ebea68c4c0c814516cb597989ee30adce26cf06",
+   "release_sha256": "6b03ed670f908da3c40d469cb72deea6e632848b19c7f8f6ef49ac309842c383",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/141-Jeff-Dan-Ray/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "b3e24c4b7f2de4479bed1f8387ea7a2d4ec68d418a4d7aeadad7c085c41f1309",
+   "release_sha256": "966cc41eec8c10d92f8b66d3641f12b0bb86f190cbca60c4b7c69ef0449f42bf",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/143-Sandra-Steven-George/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "f96135dfc190e516e4219a07d509dda6ed0a6285a14ae402c0522348f54a3ddf",
+   "release_sha256": "9eec7735d689532499fa4783bdeeee9b2a8209cad63449b04cc9ce78fb66514d",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/147-Eric-Karen-Lucy/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "423b9972fad0cea9a6c0774e081696ee44f6caeabf010169aad2e3e7b85f46e2",
+   "release_sha256": "6bccfa9c4605fcd88a8d01a499b92a84637c1af0236bd4486ffe000a4b6b11d0",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/153-Rose-Robert-Diana/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "35c7b4aa99b7da3863139ba440678410653069fc59f0ab453f519b99f55908aa",
+   "release_sha256": "2a2ea5e842f491496ac83f36669efb4643bba60538439caa9ec12a53daea21ec",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/158-Kelly-Julia-Richard/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "2b592339e18f29c3b3e4ff2c3d7685e2e69cef3f39a87a9b6fb318f88dc0fd5b",
+   "release_sha256": "59bf036581056e37450cfb5e06df8a914d5ad018855e900857ec0ed8e3d73770",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/169-Ellen-Pat-Arthur/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "fc9f8605686076a9c90f3c819f5d1099c8f0af510623044628034eaa7e79ae4f",
+   "release_sha256": "66a07aa17bd03226765cf7f371833d35db3bb81e60dc4ce35d7cd5917f0c7b06",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/175-Mike-Sean-Simon/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "77e6eb8cf36a2723b96687b4ca04535401e65c196a03147633bc4601571a3278",
+   "release_sha256": "42001258ae8233a5c49401ad3977a59431aa44a52c4acfed64367690cc8c64fb",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/181-Nancy-Kevin-Jake/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "281c9778c7e815c32db789d2739611e738e2a314ace43edf0398930c3c10f193",
+   "release_sha256": "472ed80eedfd3f3cf0e2a2bd8c33fbf85695f4fb99a08d451bead6b6015cc2aa",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/182-Sophie-Barbara-Max/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "5bd295b4498fec4176b75de75531bdaa0c401bca42761e5de0351c5865289797",
+   "release_sha256": "b2835b63e73e7070ece21fcb8b1b98c80b75873800de4a61f906d13a8f991565",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/184-Betty-Lucy-Greg/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "1d6af879d23bdeffbf5b076f49074b83c2df36cb2bb76fb24141307a553f84e6",
+   "release_sha256": "9064aa938579af1da41d860932ba0974b48e477b2049846871c6403b9a3b298c",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/confirmation/193-Jordan-Larry-Amy/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "d44e788f39723e4ae7d074ab9508ea10b635242c4b23d71f32467bc161066a57",
+   "release_sha256": "8b393c04dad710dc325353653f0aa18b589a8f7649b3dd5fce01fa1f683ca430",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.58 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/000-Laura-Bob-Tom/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "def216da10ad4d32ff2d79afa9916ff98f7beddc6e93309604b0c0e781da657e",
+   "release_sha256": "28cb95786d48732515c5ba92db22fe7a8d0c9c4b4c81f4df32c3effeb5ac8e2c",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/001-Anna-Sarah-Daniel/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "736c0214a09af6cb5a9e55b269124e8d4e273cd19090740696f5e93b70bfe482",
+   "release_sha256": "908fdd0a59933b7c9606296a92988938d97e72ba12bc939ff369ba1cb215591f",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/003-Kate-Jane-Paul/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "633dfeea338a4b1dc4f387f495284eeb7e6c60d632d0ad7ea7ff57a2db9111b3",
+   "release_sha256": "6f94e53bddfa737846f88a18ba6a92061a479023383320e6b409464114a24df2",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/004-Emma-Alice-James/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "3b0442410ab00fe35745e0d058b8e141ce66639faaedca118dc53c2b3558c211",
+   "release_sha256": "477c5a18ef069b00c4e7ae6f41e400e8f8e28b2fe8633d49f48731330af83958",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/005-Susan-John-Mark/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "d6df27b0230d81a7fabfdfc36b900385fc97c0c470b2e7f527c40bf6c19c4961",
+   "release_sha256": "f8f5bf7aafa3625f5ac2a9b7027bd82c0264add4fe3042b7614fca6fe624ed37",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/006-James-Tom-Michael/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "b92859e62345f7eeca30b4a8130acd8be3dbc59dfce5b4a9d35a4e1e462b4764",
+   "release_sha256": "75957a9ed3f786a68726f4d80a640ad939420853627a31674df3e5456df8de2b",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/007-Laura-Susan-Mark/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "ddb7e73a7935397111ea1b06d6866ae9ac896de87be62db86616b27e076af37b",
+   "release_sha256": "b0607a319a5b936b5e38067f6f038d33229252a8c588b41d7c3a2e4cc70115e4",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  },
+  "study/results/runs/development/008-Daniel-Peter-Lisa/arm-a.npz": {
+   "kind": "reduced",
+   "original_sha256": "84082df68a4454620ae38a12c2d8980caf9e75dcc7e3870d543d25a265537138",
+   "release_sha256": "74ac0e0587ba156e48cf7e62a34211ef2c555e26335ef707edb5aaed387c21ab",
+   "archive": "data/saved-outputs/study-results.tar.xz",
+   "reasons": [
+    "only the four arrays paper/make_numbers.py reads (das_r2__single, das_r4__single, das_r2_split__single, das_r2_split__train_mask); the original (1.57 MB, subspace bases, margins and margin-rule scores of every alignment) is not shipped (size)"
+   ]
+  }
+ },
+ "frozen_files_not_shipped": {},
+ "freeze_records": [
+  {
+   "path": "study/freeze.json",
+   "base": "."
+  },
+  {
+   "path": "study/freeze.json",
+   "base": "reference/joint-vs-single-interchange",
+   "field": "ai05_inputs"
+  },
+  {
+   "path": "study/AMENDMENT-2-RECORD.json",
+   "base": ".",
+   "superseded_by": [
+    "study/freeze.json"
+   ]
+  },
+  {
+   "path": "study/PREDICTIONS-RECORD.json",
+   "base": "study/prompts",
+   "field": "prompts_sha256"
+  }
+ ]
+}

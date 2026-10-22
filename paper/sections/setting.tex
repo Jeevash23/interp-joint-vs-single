@@ -1,0 +1,52 @@
+\section{Setting}\label{sec:setting}
+
+\paragraph{Tasks and alignments.}
+Every task in this paper has inputs $x=(a,b,n)$, where $a$ and $b$ are the values of two variables $A$ and $B$ that
+determine the output $y=f(a,b)$, and $n$ is a nuisance that the output ignores. In Studies~1--3, $a,b,n\in\{0,1,2\}$:
+all 27 inputs are legal and all are used. Study~4 has two values of $a$, three of $b$ and three of $n$
+(\cref{sec:gpt2-design}). We fix one site inside a network and write $z_x\in\R^d$ for the network's state there on
+input $x$, as a row vector, and $g$ for the computation from the site to the output, so that the network's output is
+$g(z_x)$. We call the states $z_x$ the \emph{natural states}.
+
+An \emph{alignment} claims that $A$ and $B$ are carried at the site by two orthogonal linear subspaces, given by
+orthogonal (symmetric and idempotent) projectors $P_A$ and $P_B$ with $P_AP_B=0$. The claim is tested with
+interchange interventions \citep{geiger2021causal,geiger2024das}. A \emph{single intervention} on $A$ takes a
+recipient input $r$ and a donor input $s$ and replaces the $A$-component of the recipient's state with the
+donor's:
+\begin{equation}\label{eq:single}
+  \SA(z_r,s) \;=\; z_r + (z_s-z_r)\,P_A .
+\end{equation}
+It predicts the output of the counterfactual input $(a_s,b_r,n_r)$, which takes $a$ from the donor and $b$ and $n$
+from the recipient. A single intervention on $B$, $\SB(z_r,t)=z_r+(z_t-z_r)P_B$, is defined in the same way and
+predicts the output of $(a_r,b_t,n_r)$. A \emph{joint intervention} takes a recipient $r$ and two donors $s$ and
+$t$,
+\begin{equation}\label{eq:joint}
+  J(r,s,t) \;=\; z_r + (z_s-z_r)\,P_A + (z_t-z_r)\,P_B ,
+\end{equation}
+and predicts the output of $(a_s,b_t,n_r)$. We write $\SA(z,s)$ for the same operation applied to any state $z$.
+We say that an edit \emph{lands on its target} if the edited state equals the natural state of the input it
+simulates, for example $\SA(z_r,s)=z_{(a_s,b_r,n_r)}$. A query passes if the network's output on the edited state
+equals the prediction: for categorical outputs, the predicted class's logit must exceed every other logit by more
+than a small tie band, $10^{-4}$ in Studies~1--3 (a query within the band is a tie); for numerical outputs, the error
+must be at most $10^{-4}$.
+
+\paragraph{Queries, panels and censuses.}
+In Studies~1--3 an alignment has 1,458 \emph{single queries}, all 729 recipient--donor pairs for each variable,
+including pairs in which the swapped variable keeps its value (these check that the edit leaves the output alone), and
+19,683 \emph{joint queries}. A finite test draws queries uniformly, with replacement, from a set we call a
+\emph{panel}, and accepts the alignment if none of them fails. The \emph{full-domain single} panel holds the 972 single
+queries in which the swapped variable changes; draws alternate between $A$ and $B$. The \emph{restricted single} panel
+keeps those whose recipient and donor both have $a,b\in\{0,1\}$, the \emph{minimal-pair} panel those whose donor
+differs from the recipient only in the swapped variable, and the \emph{held-out} panel those whose counterfactual input
+has $a=2$ or $b=2$. The \emph{joint} panel holds the 8,748 joint queries in which both variables change. A single
+query reads two natural states and runs the edited suffix once, so it costs three model calls; a joint query costs
+four. Comparisons are made at equal numbers of calls. Study~4 uses the same panels and costs on its own domain.
+
+Because every domain here is finite, every query can be evaluated; we call the complete set of outcomes an
+alignment's \emph{census}. If an alignment fails a fraction $p$ of a panel's queries, a test of $m$ queries from
+that panel detects it with probability $1-(1-p)^m$; for single panels that alternate between the two variables,
+with failure rates $p_A$ and $p_B$, the probability is $1-(1-p_A)^{\lceil m/2\rceil}(1-p_B)^{\lfloor m/2\rfloor}$.
+These probabilities are exact for a given network. The intervals reported for Studies~2--4 describe variation across
+networks or tasks. Where a domain is too large for a census, a failure rate can only be estimated from sampled
+queries; \citet{asiaee2026certified} gives confidence intervals and anytime-valid confidence sequences for interchange
+accuracy and other interventional scores.

@@ -1,0 +1,25 @@
+{
+ "theta_degrees": 36.0,
+ "tau": 1.188820645368942,
+ "k": 2.1029244484765344,
+ "both_tilted": {
+  "single_queries": 1458,
+  "single_failures": 0,
+  "joint_queries": 19683,
+  "joint_failures": 4860,
+  "joint_panel_queries": 8748,
+  "joint_panel_failures": 4860,
+  "max_joint_error": 1.5000000000000002,
+  "max_single_edit_off_natural": 0.9510565162951536
+ },
+ "only_a_tilted": {
+  "single_queries": 1458,
+  "single_failures": 0,
+  "joint_queries": 19683,
+  "joint_failures": 0,
+  "joint_panel_queries": 8748,
+  "joint_panel_failures": 0,
+  "max_joint_error": 1.1102230246251565e-16,
+  "max_single_edit_off_natural": 0.9510565162951536
+ }
+}

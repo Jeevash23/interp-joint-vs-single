@@ -1,0 +1,54 @@
+# Unpacked from the release attachments (README.md, "Release files")
+# per-run-outputs.tar.gz
+/gpt2/data/saved-outputs/companion-study2-networks.tar.xz
+/gpt2/data/saved-outputs/study-results.tar.xz
+/small-networks/data/saved-outputs/study0-pilot.tar.xz
+/small-networks/data/saved-outputs/study1-compiled-programs.tar.xz
+/small-networks/data/saved-outputs/study2-trained-networks.tar.xz
+/small-networks/data/saved-outputs/study3-multi-site.tar.xz
+# frozen-protocols.tar.gz
+/gpt2/provenance/
+/gpt2/reference/joint-vs-single-interchange/studies/2-trained-networks/FROZEN-MANIFEST.json
+/gpt2/study/AMENDMENT-2-RECORD.json
+/gpt2/study/PREDICTIONS-BIGGER.md
+/gpt2/study/PREDICTIONS-RECORD.json
+/gpt2/study/PREDICTIONS.md
+/gpt2/study/PROTOCOL-approved-2026-10-17.md
+/gpt2/study/PROTOCOL.md
+/gpt2/study/freeze.json
+/small-networks/studies/0-pilot/06-Study-History/PROTOCOL-FROZEN-2026-09-29.md
+/small-networks/studies/1-compiled-programs/06-Study-History/V2-FROZEN-MANIFEST.json
+/small-networks/studies/1-compiled-programs/06-Study-History/V2-PROTOCOL-FROZEN.md
+/small-networks/studies/1-compiled-programs/06-Study-History/V2-VERIFICATION-AMENDMENT.md
+/small-networks/studies/2-trained-networks/AMENDMENTS.md
+/small-networks/studies/2-trained-networks/FROZEN-MANIFEST.json
+/small-networks/studies/2-trained-networks/PROTOCOL.md
+/small-networks/studies/3-multi-site/FROZEN-MANIFEST.json
+/small-networks/studies/3-multi-site/PREDICTIONS-RECORD.json
+/small-networks/studies/3-multi-site/PROTOCOL.md
+# Written by `make unpack` from the saved outputs and the compressed inputs
+/gpt2/reference/joint-vs-single-interchange/studies/2-trained-networks/runs/
+/gpt2/study/results/
+/small-networks/studies/0-pilot/04-Results/
+/small-networks/studies/1-compiled-programs/04-Results/
+/small-networks/studies/1-compiled-programs/posthoc/results/
+/small-networks/studies/2-trained-networks/posthoc/heldout-split/
+/small-networks/studies/2-trained-networks/posthoc/results/
+/small-networks/studies/2-trained-networks/results/
+/small-networks/studies/2-trained-networks/runs/
+/small-networks/studies/3-multi-site/posthoc/results/
+/small-networks/studies/3-multi-site/results/
+/small-networks/studies/3-multi-site/runs/
+# Environments, caches, downloaded checkpoints, figures and rerun copies
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+/gpt2/models/*/
+/gpt2/paper/figures/
+/gpt2/reference/joint-vs-single-interchange/paper/figures/
+/paper/figures/
+/small-networks/paper/figures/
+/paper/build/
+/paper/main.pdf
+/reruns/

@@ -1,0 +1,15 @@
+{
+ "release": "joint-and-single-interchange-tests",
+ "changed_files": {},
+ "frozen_files_not_shipped": {},
+ "parts": {
+  "small-networks": {
+   "from_release": "joint-vs-single-interchange",
+   "sha256_of_SHA256SUMS": "8fe6ae25f2d72331e052fb64613e26cf5b1cbc7684c28818a6be096d0d9c74d6"
+  },
+  "gpt2": {
+   "from_release": "joint-and-single-interchange-gpt2",
+   "sha256_of_SHA256SUMS": "8ae034234cb61dc785ec2e0852b297e7f7a63ee105615e0b3f6cc744b4eb3497"
+  }
+ }
+}

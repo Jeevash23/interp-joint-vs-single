@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+% Reproducible PDF bytes: no creation date, no random trailer identifier, no producer banner.
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow,array}
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
+\usepackage{subcaption}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{needspace}
+\usepackage[section]{placeins}
+\usepackage[numbers,sort&compress]{natbib}
+\setlength{\bibsep}{2pt}
+\usepackage[hidelinks,pdftitle={When can a joint intervention reject an alignment that single interventions accept? From small networks to GPT-2},pdfauthor={Richard Jeevash},pdfcreator={},pdfproducer={}]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlength{\parskip}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\ci}[2]{\,[#1,\,#2]}
+\crefname{appendix}{Appendix}{Appendices}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\SA}{S_A}
+\newcommand{\SB}{S_B}
+% Table bodies that end without a rule are read with the TeX primitive: LaTeX's \input runs file hooks, which
+% inside a tabular would add an empty row.
+\makeatletter\newcommand{\tableinput}[1]{\@@input #1 }\makeatother
+% Both columns of Table 6 wrap; the result column (1.22 of the average X width, 266 pt) is wide enough for the
+% longest result with an interval (262 pt), so no interval breaks across lines.
+\newcolumntype{U}{>{\raggedright\arraybackslash\hsize=0.78\hsize}X}
+\newcolumntype{V}{>{\raggedright\arraybackslash\hsize=1.22\hsize}X}
+% The public code repository (release v1.0 holds the per-run outputs and the frozen protocols).
+\newcommand{\coderepo}{\url{https://github.com/Jeevash23/interp-joint-vs-single}}
+
+\input{generated/numbers.tex}
+
+\title{\textbf{When can a joint intervention reject an alignment\\ that single interventions accept?\\ From small networks to GPT-2}}
+\author{Richard Jeevash\\[2pt]
+\small University of Westminster (Informatics Institute of Technology, Sri Lanka)\\
+\small \href{mailto:jeevash@richardjeevash.com}{jeevash@richardjeevash.com}\quad
+ORCID \href{https://orcid.org/0009-0005-7812-0939}{0009-0005-7812-0939}}
+\date{\vspace{-0.5em}October 2026}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{abstract}
+\noindent
+\input{sections/abstract}
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/setting}
+\input{sections/theory}
+\input{sections/compiled}
+\input{sections/trained}
+\input{sections/multisite}
+\input{sections/gpt2}
+\input{sections/strategies}
+\input{sections/related}
+\input{sections/discussion}
+
+\paragraph{Code and data.}
+The code, the frozen protocols, the study records and the saved outputs of all four studies are public at
+\coderepo{}; the per-run outputs and the frozen protocols are attached to its release v1.0. Every number and generated
+table in this paper can be recomputed from the saved outputs on a CPU, without a model or network access.
+
+\paragraph{Use of AI assistants.}
+Language-model assistants (Claude, Anthropic; Codex, OpenAI) were used throughout this work, under the author's direction, to help design the studies, to write and run the code for the experiments and analyses, to draft and revise the text and to check the references against their online records. All reported results come from the saved study outputs, and the numbers in the text were generated from those outputs or checked against them.
+
+\FloatBarrier
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+\appendix
+\crefalias{section}{appendix}
+\input{sections/appendix}
+
+\end{document}

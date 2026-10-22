@@ -1,0 +1,101 @@
+{
+  "study": "AI-10 joint and single interchange tests in GPT-2 Small IOI (protocol approved 17 October 2026; not frozen)",
+  "model": {
+    "name": "GPT-2 Small (openai-community/gpt2)",
+    "snapshot": "~/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "safetensors_sha256": "248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707",
+    "bos_token_id": 50256
+  },
+  "environment": "<environment>/.venv (Python 3.12.14, torch 2.13.0 CUDA 13.0 build, transformers 5.16.1), run with python -B",
+  "templates_per_task": 3,
+  "development_tasks": 8,
+  "development_max_draws": 24,
+  "confirmation_tasks": 40,
+  "confirmation_max_draws": 200,
+  "seeds": {
+    "development_draws": 2026101701,
+    "confirmation_draws": 2026101702,
+    "alignments": 2026101703,
+    "heldout_split": 2026101704,
+    "bootstrap": 20261017,
+    "strategy_simulation": 2026101705
+  },
+  "competence_margin": 1.0,
+  "tie_band_candidates": [
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "secondary_pass_threshold": 1.0,
+  "candidate_layers": [
+    6,
+    8,
+    9,
+    10
+  ],
+  "das": {
+    "ranks": [
+      1,
+      2,
+      4
+    ],
+    "learning_rate_candidates": [
+      0.001,
+      0.003,
+      0.01
+    ],
+    "step_candidates": [
+      250,
+      500,
+      1000,
+      1500
+    ],
+    "development_steps": 1500,
+    "convergence_tolerance": 0.01,
+    "steps_rule_note": "steps chosen from the learning-rate runs at the middle candidate layer (PROTOCOL Section 11)"
+  },
+  "heads": {
+    "position": [
+      [
+        7,
+        3
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        6
+      ]
+    ],
+    "token": [
+      [
+        8,
+        10
+      ]
+    ]
+  },
+  "budgets": [
+    12,
+    24,
+    60,
+    120
+  ],
+  "costs": {
+    "single": 3,
+    "joint": 4,
+    "gradient": 1
+  },
+  "rule_threshold": 1.0,
+  "bootstrap_replicates": 10000,
+  "strategy_replicates": 2000,
+  "verifier_random_sample": 2000,
+  "batch_queries": 256,
+  "cpu_threads": 2,
+  "resources": {
+    "max_gpu_memory_fraction": 0.65,
+    "minimum_ram_gib": 2.0,
+    "minimum_disk_gib": 8.0
+  }
+}

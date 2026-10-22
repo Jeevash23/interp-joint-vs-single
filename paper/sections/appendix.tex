@@ -1,0 +1,142 @@
+\section{Study 1 details}\label{app:compiled}
+
+\paragraph{Programs and site.}
+Lookup programs aggregate the tokens at positions 0 and 1 into categorical variables and map them through the
+table with a categorical MLP; additive programs aggregate the tokens categorically and map each to its numerical
+value before a numerical MLP adds them, because the pinned Tracr compiler does not aggregate non-binary numerical
+values. Compiler weights are used unchanged. Tables were drawn by rejection sampling with seeds 10000--10039
+(lookup) and 20000--20039 (additive); no table repeats within or across families.
+
+\paragraph{Labels.}
+Let $Q$ be the rotation of the edited coordinates and let $C_A$ and $C_B$ select the unrotated carrier coordinates
+of $a$ and $b$. An alignment is valid if, for every difference $d=z_s-z_r$ between natural states,
+$dP_AQ^{\top}C_A=dQ^{\top}C_A$ and $dP_AQ^{\top}C_B=0$, and symmetrically for $P_B$, within $10^{-4}$, and
+$\|P_AP_B-P_BP_A\|_{\max}<10^{-8}$. In words, an $A$-edit moves the $a$-carrier by exactly the donor's difference
+and leaves the $b$-carrier alone. Because the final MLP reads only the carriers among the edited coordinates,
+valid alignments implement every single and joint interchange correctly. The labels never use a test's output.
+
+\paragraph{Alignments.}
+Mean-contrast alignments take the singular vectors (singular value above $10^{-6}$) of the centred conditional means
+of the site states for each value of the variable. The DAS alignment uses an orthogonal matrix parameterised by a
+Cayley transform, initialised from the restricted mean contrasts plus a seeded random completion, with rank 2 per
+variable for lookup and 1 for additive. It minimises the squared error of the output scores over the 144 single
+interchanges among the 12 restricted inputs, with Adam (learning rate 0.02) for at most 200 steps, keeping the
+lowest-loss iterate and stopping at a loss of $10^{-12}$, which keeps an exact solution from drifting at round-off
+level. Every final DAS alignment reproduces all its training counterfactuals. Random alignments have the DAS ranks.
+
+\paragraph{Tests.}
+Each test draws its queries from a fixed seeded stream, the same for all alignments of a program; singles alternate
+between $A$ and $B$; the joint, raw-distance, transport and natural tests share one stream of $(r,s,t)$ triples in
+which both variables change. A test accepts an alignment if every sampled query passes. All allocated queries were
+executed. Budgets count three calls per single query, four per joint and raw-distance query, six per transport query
+and one per natural execution.
+
+\paragraph{Development, freeze and amendment.}
+Development used four programs per family. It already showed that broader single panels and the strong controls
+rejected the restricted alignments as often as joint panels did; the protocol was then frozen and the final
+programs generated. After the final run an independent re-execution found \CmpNearTies{} queries in which the
+saved category and the recomputed one differ; in all of them the two classes' scores differ by at most
+\CmpTieGap{}. A post-freeze amendment therefore treats a score gap within $10^{-4}$ as undecided. Under that rule
+every rejection by the broader panels stands, and one rejection by restricted singles at 120 calls (a random
+alignment) becomes undecided. The census in the main text uses the same rule.
+
+\paragraph{Verification and replay.}
+A separate verifier, which shares no model or panel code with the study, recomputes the networks head by head from
+the saved weights, re-derives every label, re-executes all \CmpQueries{} saved queries with the margin rule, and
+checks joint composition over all 19,683 triples for every alignment of the first program in each family. A fresh
+environment with the pinned packages recompiled one program per family with bitwise-identical parameters and
+reproduced all \CmpReplayRecords{} of their query records exactly, reusing the saved alignments.
+
+\section{Study 2 details}\label{app:trained}
+\input{sections/appendix-trained}
+
+\section{Study 3 details}\label{app:multisite}
+\input{sections/appendix-multisite}
+
+\section{Study 4: how the protocol changed, and when}\label{app:gpt2-history}
+
+The protocol was approved as written, with \NTasksConf{} confirmation tasks and the sign rule of
+\cref{sec:gpt2-design} as the primary pass rule. Its predictions, configuration and prompt lists were hashed before any
+model was run. Every later change was recorded before the data it concerns.
+
+\paragraph{Amendment 1: the parity gate (after the pilot, before development).} The pilot compared our GPT-2 code with
+the reference implementation of the transformers library on two development draws. In float32 on the GPU their margins
+differed by up to \PilotMarginGap, against a prespecified limit of $10^{-4}$; in float64 on the CPU they agreed to
+\ParityFloatSixtyFour{} in every logit, so the gap was rounding. The gate became float64 agreement within $10^{-8}$ and
+float32 agreement within $10^{-3}$, which the pilot's records pass.
+
+\paragraph{Amendment 2: a bigger-model arm (during development, before any of its computation).} We
+repeated the one-site arm in GPT-2 Medium on a cloud GPU (an H100), with the same prompts (the two models share
+GPT-2 Small's tokeniser byte for byte), the same settings rules (candidate layers \CandMedium{}, the same relative
+depths) and predictions 1--3, under a budget of \ArmBudget. DAS training used TF32 matrix products to fit the budget;
+every census, margin and gradient used full float32. A first stage reproduced \NReproQueries{} saved GPT-2 Small
+margins within \CheckReproGap{} (limit $10^{-3}$); refitted with TF32, the same GPT-2 Small alignment reached a best
+loss of \TfLoss{} against \LocalLoss{} in float32, with \TfAgreePct\% of its single decisions equal. A cost rule fixed
+in the amendment then gave GPT-2 Medium \NTasksMedium{} of the planned \NTasksConf{} confirmation tasks, and ruled out
+GPT-2 Large. The arm spent \ArmSpent{} in all.
+
+\paragraph{A development-informed addendum (before the freeze).} After reading the development results
+(\cref{app:gpt2-development}), we added a reported secondary comparison of joint tests with single tests drawn
+from all single queries, including those in which the swapped variable keeps its value. The hashed predictions were
+not changed. The same addendum recorded that two items planned for development had not been written: an independent
+float64 verifier and two simulated small-budget tests. The verifier was written after the freeze and is labelled post
+hoc (\cref{app:gpt2-verification}); the simulated tests were not run.
+
+\paragraph{Other departures from the protocol.} The learning-rate search ran at layer 9 of GPT-2 Small, the third of
+the four candidates, where the protocol said layer 8; the winning rate won by a wide margin
+(\cref{app:gpt2-development}). The development run was paused for a power cut, and the confirmation runs shared the
+computer with other work; neither changes a computation.
+
+\section{Study 4: development}\label{app:gpt2-development}
+
+On the development tasks, rank-2 DAS failed none of the full-domain single queries at any candidate layer of either
+model, so the tie rule chose the latest layer (\LayerSmall{} in GPT-2 Small, \LayerMedium{} in GPT-2 Medium); the
+learning rate was \LrSmall{} and the number of steps \StepsSmall{} in both. In GPT-2 Small the learning-rate
+search gave a mean best loss of \LrLossBest{} for the chosen rate, against \LrLossSecond{} and \LrLossThird{} for the
+other two. The development results that led to the addendum are those of \cref{sec:gpt2-results}, on fewer tasks: in
+GPT-2 Small no alignment passed every single query, rank-2 and rank-4 DAS failed \DevUnchangedRTwoPct\% and
+\DevUnchangedRFourPct\% of the single position queries whose donor shares the recipient's position, and joint minus
+full-domain single detection at \Budget{} calls was \DevContrastSmall.
+
+\section{Study 4: verification}\label{app:gpt2-verification}
+
+A second implementation of GPT-2 Small in NumPy float64, written after the freeze and sharing no model code with the
+study, recomputed natural states from the tokens and then the margins of a sample of saved queries from the saved
+subspaces: every query of every alignment that failed only jointly, every query within 0.05 of the tie band, and 2,000
+random queries per phase, across arms a, a$'$, b and c. Of \VerifyQueriesConf{} confirmation queries,
+\VerifyDisagreeConf{} changed decision; the largest margin difference was \VerifyMaxGapConf. GPT-2 Medium's arrays
+were not re-verified; the first stage of its arm reproduced saved GPT-2 Small margins before any GPT-2 Medium
+computation (\cref{app:gpt2-history}).
+
+\section{Reproductions of published demonstrations}\label{app:reproductions}
+
+\paragraph{Divergent representations.}
+We ran the released sanity-check script for Section~4.2 of \citet{grant2026divergent} (repository commit
+\texttt{f2548d2}) unchanged; all its assertions pass. In its hand-set ReLU layer the natural class-A states score
+\GrantNatA{} and the class-B states score zero; adding the mean difference vector to the two class-B states raises
+their scores to \GrantPatched{}, and the first of the two edits does so through a unit that is silent on every
+natural input. This confirms the released example; it does not test the paper's trained models.
+
+\paragraph{Causal abstraction metrics.}
+We ran Experiment~2 (an XOR backup path) of the released code of \citet{meloux2026validating} (commit
+\texttt{d91f65b}) through its own experiment factory, \CaeRuns{} runs per condition with 500 samples each, which
+are the first \CaeRuns{} of the 100 official runs. The two faithfulness-aware metrics separate the valid model from
+the backup-path model (two-sided Mann--Whitney $p=\CaePDown$ and \CaePUp), while the metrics without faithfulness
+and interchange intervention accuracy do not ($p\ge\CaePOtherMin$), as the paper reports. The valid model scores
+\CaeValidDown{} and \CaeValidUp{} on the two faithfulness-aware metrics (\CaeValidDownNf{} and \CaeValidUpNf{} without
+faithfulness; interchange intervention accuracy \CaeValidIia) rather than zero. In the released script, the valid
+model's mediator ($m$ in the paper, \texttt{a} in the code) does not respond to interventions: line 107 of
+\texttt{systems/11\_controlled\_experiments.py} sets it to the input (\texttt{a = x.copy()}) whatever intervention is
+requested, while the library passes the intervention correctly. With this line changed so that the intervention is
+applied, every metric is exactly zero on the valid model, and only the faithfulness-aware metrics are non-zero on the
+backup-path model (\CaeFixedLeakDown{} and \CaeFixedLeakUp). On 6 October 2026 the file in the authors' repository
+was identical, byte for byte, at the cited commit and on its default branch.
+
+\section{Records}\label{app:records}
+
+The project folders contain, for each study, the frozen protocol and hashes, all networks, alignments, query
+records and censuses, the analysis and verification scripts with their outputs, and the scripts that regenerate
+every number, table and figure of this paper from those outputs. For Study~4 they also hold the prompt lists, the
+development and confirmation records of both models, the cloud arm's check, cost and spending records, and the
+verifier's outputs; GPT-2 Medium's full arrays stay with the cloud provider's storage. An earlier pilot with two
+hand-built Boolean programs reached the same conclusion as Study~1 and is kept with its records; it is not used here.

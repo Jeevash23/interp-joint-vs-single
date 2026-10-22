@@ -1,0 +1,37 @@
+{
+  "date_utc": "2026-09-29T07:35:50.667908+00:00",
+  "local_python": "3.14.7",
+  "platform": "Linux-7.2.8-1-[distro]-x86_64-with-glibc2.44",
+  "scientific_dependencies": [],
+  "document_builder": "[redacted] bundled ReportLab 4.4.9; Noto Sans local font; Poppler visual QA",
+  "scientific_source_repository": "local project scaffold is not a Git repository; file SHA256s below",
+  "external_code": "none executed; GitHub DNS failed, so external source commits unavailable",
+  "paper_versions": [
+    "2607.00267v1",
+    "2511.04638v5",
+    "2605.12671v1",
+    "2605.09129v1"
+  ],
+  "files": {
+    "02-Code/study.py": "b1f17f0050e756a187d046caf3c75ff3249f8f1ee219e2c33ebee4cb8b8f48db",
+    "02-Code/verify_records.py": "1b26ec695ad3fd158e0c7e347c83ec0e8a6d2e057a9484f8fe0c4800212e2d93",
+    "02-Code/requirements.lock": "3be275516abe5c3245ebd03ea2a5da781e26cd50d98364df768c164bb2491633",
+    "06-Study-History/PROTOCOL-FROZEN-2026-09-29.md": "5a59154ddc53139b657adff40c39267eadab2f593d25dcca05cce1ede0426b77",
+    "03-Data/MANIFEST.json": "4a9c8b464164ded0382ff0819621e9fff112f53f5e7030b7ca35fdfb788d4175",
+    "04-Results/final.json": "cccfe6bdd02ac19a5931a66b0d69cb0cd317855777ba4c65ad29216d1f361eaf",
+    "04-Results/independent-verification.json": "bbc4846d8513042f5640da01f63bf70b2d98fbb1223f1bb4624d72a699e3aa2e",
+    "04-Results/clean-replay.json": "c2733d34d9c1eb96f6995f4631e691fee50989de1679dc4e2d6f76843dc1d432",
+    "01-Papers/AI-05-REPORT.md": "ab5bf4949c4168f1ad0db04395c209e79185a121a6e82c4e749efcfe12212021",
+    "01-Papers/AI-05-REPORT.pdf": "9259bf7d621d1506542bebaf8188ed65ddd80edd548effd8125ec307d7a20eb9",
+    "05-Notes/STATUS-CORRECTION.md": "2f0dfd74607908b94c929f630d215e094593c13a4f2e570f6ae13bb6838ba233",
+    "02-Code/build_report_pdf.py": "3b0a82c0718ceb7235e7db943b2d439bca43fce3a0fa5403db6c2f7040174c15"
+  },
+  "resources": {
+    "mode": "CPU only, one process",
+    "additional_disk_observed": "14 MiB project total at completion, including venv and PDF QA",
+    "run_elapsed_seconds": 0.005982800998026505,
+    "gpu_used": false
+  },
+  "project_status": "Preliminary demonstration complete; commissioned research project unfinished",
+  "amendment": "Completion wording corrected after user question. Original report and manifest archived; scientific records unchanged."
+}

@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "family": "additive",
+    "seed": 20013,
+    "table": [
+      [
+        12,
+        9,
+        11
+      ],
+      [
+        8,
+        5,
+        7
+      ],
+      [
+        7,
+        4,
+        6
+      ]
+    ],
+    "generator_draws": 1,
+    "a_values": [
+      8,
+      4,
+      3
+    ],
+    "b_values": [
+      4,
+      1,
+      3
+    ]
+  },
+  "labels": [
+    "aggregate_4:0",
+    "aggregate_4:1",
+    "aggregate_4:2",
+    "aggregate_5:0",
+    "aggregate_5:1",
+    "aggregate_5:2",
+    "answer_1",
+    "indices:0",
+    "indices:1",
+    "indices:2",
+    "map_8:0",
+    "map_9:1",
+    "one",
+    "tokens:0",
+    "tokens:1",
+    "tokens:2",
+    "tokens:BOS",
+    "tokens:compiler_pad",
+    "var_a_2",
+    "var_b_3"
+  ],
+  "num_heads": 2,
+  "key_size": 4,
+  "num_layers": 3,
+  "token_map": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "BOS": 3,
+    "compiler_pad": 4
+  },
+  "output_values": [],
+  "categorical": false,
+  "site": 4
+}

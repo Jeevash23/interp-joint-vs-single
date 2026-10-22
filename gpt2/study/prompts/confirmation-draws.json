@@ -1,0 +1,6402 @@
+[
+ {
+  "draw": 0,
+  "split": "heldout",
+  "names": [
+   "Maria",
+   "Betty",
+   "Mike"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " garden",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 1,
+  "split": "heldout",
+  "names": [
+   "Emily",
+   "Joseph",
+   "Charles"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " brought",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 2,
+  "split": "heldout",
+  "names": [
+   "Carl",
+   "Helen",
+   "Jordan"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 3,
+  "split": "heldout",
+  "names": [
+   "Sean",
+   "Gary",
+   "Brian"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " sent",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 4,
+  "split": "heldout",
+  "names": [
+   "Joyce",
+   "Kelly",
+   "Diana"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 5,
+  "split": "heldout",
+  "names": [
+   "Ian",
+   "Sophie",
+   "Jacob"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 6,
+  "split": "heldout",
+  "names": [
+   "Ben",
+   "Rachel",
+   "Carol"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 7,
+  "split": "heldout",
+  "names": [
+   "Martin",
+   "Barbara",
+   "Patricia"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " drove",
+    " market",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 8,
+  "split": "heldout",
+  "names": [
+   "Eric",
+   "Scott",
+   "Nick"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 9,
+  "split": "heldout",
+  "names": [
+   "Claire",
+   "Adam",
+   "Robert"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 10,
+  "split": "heldout",
+  "names": [
+   "Oliver",
+   "Hannah",
+   "Anne"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " house",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " came",
+    " house",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 11,
+  "split": "heldout",
+  "names": [
+   "Donna",
+   "Joe",
+   "Kim"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " beach",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 12,
+  "split": "heldout",
+  "names": [
+   "Lucy",
+   "Jennifer",
+   "Dan"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 13,
+  "split": "heldout",
+  "names": [
+   "Sharon",
+   "Larry",
+   "Leo"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " library",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 14,
+  "split": "heldout",
+  "names": [
+   "George",
+   "Amy",
+   "Andrew"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 15,
+  "split": "heldout",
+  "names": [
+   "Grace",
+   "Greg",
+   "Pat"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 16,
+  "split": "heldout",
+  "names": [
+   "Sam",
+   "Chris",
+   "Megan"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 17,
+  "split": "heldout",
+  "names": [
+   "Ruth",
+   "Victoria",
+   "Nancy"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 18,
+  "split": "heldout",
+  "names": [
+   "Steve",
+   "Max",
+   "Jake"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 19,
+  "split": "heldout",
+  "names": [
+   "Luke",
+   "Matt",
+   "Jeff"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 20,
+  "split": "heldout",
+  "names": [
+   "Roger",
+   "Rebecca",
+   "Rose"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 21,
+  "split": "heldout",
+  "names": [
+   "Walter",
+   "Edward",
+   "Julia"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 22,
+  "split": "heldout",
+  "names": [
+   "William",
+   "Jack",
+   "Tony"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " beach",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 23,
+  "split": "heldout",
+  "names": [
+   "Ray",
+   "Jessica",
+   "Alex"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " house",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 24,
+  "split": "heldout",
+  "names": [
+   "Tim",
+   "Ryan",
+   "Henry"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 25,
+  "split": "heldout",
+  "names": [
+   "Richard",
+   "Ted",
+   "Fred"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 26,
+  "split": "heldout",
+  "names": [
+   "Harry",
+   "Simon",
+   "Ellen"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " office",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 27,
+  "split": "heldout",
+  "names": [
+   "Jim",
+   "Karen",
+   "Jason"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 28,
+  "split": "heldout",
+  "names": [
+   "Thomas",
+   "Kevin",
+   "Linda"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 29,
+  "split": "heldout",
+  "names": [
+   "Frank",
+   "Steven",
+   "Sandra"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 30,
+  "split": "heldout",
+  "names": [
+   "Maria",
+   "Thomas",
+   "Jacob"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " cake"
+   ],
+   [
+    "While",
+    " came",
+    " garden",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 31,
+  "split": "heldout",
+  "names": [
+   "Jennifer",
+   "Claire",
+   "Jack"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " garden",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 32,
+  "split": "heldout",
+  "names": [
+   "Edward",
+   "Betty",
+   "Sharon"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 33,
+  "split": "heldout",
+  "names": [
+   "Sophie",
+   "Eric",
+   "Walter"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 34,
+  "split": "heldout",
+  "names": [
+   "Jessica",
+   "Pat",
+   "Tim"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 35,
+  "split": "heldout",
+  "names": [
+   "Simon",
+   "Richard",
+   "Emily"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " office",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 36,
+  "split": "heldout",
+  "names": [
+   "Nick",
+   "Sean",
+   "Brian"
+  ],
+  "templates": [
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 37,
+  "split": "heldout",
+  "names": [
+   "Fred",
+   "Mike",
+   "Jason"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 38,
+  "split": "heldout",
+  "names": [
+   "Ellen",
+   "Joseph",
+   "Kelly"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " beach",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 39,
+  "split": "heldout",
+  "names": [
+   "Rebecca",
+   "Jake",
+   "Max"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 40,
+  "split": "heldout",
+  "names": [
+   "Martin",
+   "Frank",
+   "Henry"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 41,
+  "split": "heldout",
+  "names": [
+   "Andrew",
+   "Scott",
+   "Julia"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 42,
+  "split": "heldout",
+  "names": [
+   "Ray",
+   "Larry",
+   "Nancy"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 43,
+  "split": "heldout",
+  "names": [
+   "Donna",
+   "Charles",
+   "Karen"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 44,
+  "split": "heldout",
+  "names": [
+   "Dan",
+   "Steven",
+   "Grace"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 45,
+  "split": "heldout",
+  "names": [
+   "Matt",
+   "Jim",
+   "William"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 46,
+  "split": "heldout",
+  "names": [
+   "Tony",
+   "Roger",
+   "Carl"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 47,
+  "split": "heldout",
+  "names": [
+   "Ryan",
+   "Leo",
+   "Carol"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " house",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 48,
+  "split": "heldout",
+  "names": [
+   "Linda",
+   "Rachel",
+   "Joyce"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 49,
+  "split": "heldout",
+  "names": [
+   "Robert",
+   "Harry",
+   "Joe"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 50,
+  "split": "heldout",
+  "names": [
+   "Ben",
+   "Kim",
+   "Chris"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " brought",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 51,
+  "split": "heldout",
+  "names": [
+   "Ted",
+   "George",
+   "Patricia"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 52,
+  "split": "heldout",
+  "names": [
+   "Greg",
+   "Rose",
+   "Oliver"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 53,
+  "split": "heldout",
+  "names": [
+   "Ruth",
+   "Sam",
+   "Arthur"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 54,
+  "split": "heldout",
+  "names": [
+   "Luke",
+   "Victoria",
+   "Adam"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 55,
+  "split": "heldout",
+  "names": [
+   "Lucy",
+   "Alex",
+   "Ian"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 56,
+  "split": "heldout",
+  "names": [
+   "Amy",
+   "Kevin",
+   "Anne"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 57,
+  "split": "heldout",
+  "names": [
+   "Diana",
+   "Steve",
+   "Jordan"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 58,
+  "split": "heldout",
+  "names": [
+   "Helen",
+   "Hannah",
+   "Megan"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 59,
+  "split": "heldout",
+  "names": [
+   "Sandra",
+   "Gary",
+   "Jeff"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " sent",
+    " gift"
+   ],
+   [
+    "While",
+    " drove",
+    " beach",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 60,
+  "split": "heldout",
+  "names": [
+   "Nancy",
+   "Ruth",
+   "Andrew"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 61,
+  "split": "heldout",
+  "names": [
+   "Ian",
+   "Alex",
+   "Lucy"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 62,
+  "split": "heldout",
+  "names": [
+   "Ellen",
+   "Grace",
+   "Jack"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 63,
+  "split": "heldout",
+  "names": [
+   "Karen",
+   "Rose",
+   "Steve"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 64,
+  "split": "heldout",
+  "names": [
+   "Victoria",
+   "Jessica",
+   "Fred"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 65,
+  "split": "heldout",
+  "names": [
+   "Sam",
+   "Julia",
+   "Simon"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " house",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 66,
+  "split": "heldout",
+  "names": [
+   "Ben",
+   "Jacob",
+   "Ray"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 67,
+  "split": "heldout",
+  "names": [
+   "Jordan",
+   "Amy",
+   "Harry"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 68,
+  "split": "heldout",
+  "names": [
+   "Martin",
+   "Eric",
+   "Carol"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 69,
+  "split": "heldout",
+  "names": [
+   "Nick",
+   "Joe",
+   "Edward"
+  ],
+  "templates": [
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 70,
+  "split": "heldout",
+  "names": [
+   "Sharon",
+   "Sean",
+   "Anne"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " library",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 71,
+  "split": "heldout",
+  "names": [
+   "Kim",
+   "Chris",
+   "Sandra"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " sent",
+    " gift"
+   ],
+   [
+    "While",
+    " drove",
+    " library",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 72,
+  "split": "heldout",
+  "names": [
+   "George",
+   "Richard",
+   "Arthur"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 73,
+  "split": "heldout",
+  "names": [
+   "Jeff",
+   "Ryan",
+   "Tony"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 74,
+  "split": "heldout",
+  "names": [
+   "Walter",
+   "Robert",
+   "Luke"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 75,
+  "split": "heldout",
+  "names": [
+   "Oliver",
+   "Brian",
+   "Helen"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 76,
+  "split": "heldout",
+  "names": [
+   "Rachel",
+   "Hannah",
+   "Frank"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 77,
+  "split": "heldout",
+  "names": [
+   "Tim",
+   "Jennifer",
+   "Barbara"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 78,
+  "split": "heldout",
+  "names": [
+   "Greg",
+   "Scott",
+   "Linda"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 79,
+  "split": "heldout",
+  "names": [
+   "Maria",
+   "Adam",
+   "Jason"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 80,
+  "split": "heldout",
+  "names": [
+   "Diana",
+   "Matt",
+   "Betty"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " brought",
+    " bag"
+   ],
+   [
+    "While",
+    " drove",
+    " house",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 81,
+  "split": "heldout",
+  "names": [
+   "Roger",
+   "Megan",
+   "Gary"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 82,
+  "split": "heldout",
+  "names": [
+   "Ted",
+   "Joyce",
+   "Dan"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 83,
+  "split": "heldout",
+  "names": [
+   "Donna",
+   "Steven",
+   "Emily"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 84,
+  "split": "heldout",
+  "names": [
+   "Mike",
+   "Leo",
+   "Jim"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 85,
+  "split": "heldout",
+  "names": [
+   "William",
+   "Pat",
+   "Kelly"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " house",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 86,
+  "split": "heldout",
+  "names": [
+   "Kevin",
+   "Charles",
+   "Henry"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 87,
+  "split": "heldout",
+  "names": [
+   "Larry",
+   "Max",
+   "Thomas"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 88,
+  "split": "heldout",
+  "names": [
+   "Claire",
+   "Patricia",
+   "Sophie"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 89,
+  "split": "heldout",
+  "names": [
+   "Rebecca",
+   "Joseph",
+   "Jake"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 90,
+  "split": "heldout",
+  "names": [
+   "Sophie",
+   "Betty",
+   "Carol"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " garden",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 91,
+  "split": "heldout",
+  "names": [
+   "Larry",
+   "Anne",
+   "Edward"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 92,
+  "split": "heldout",
+  "names": [
+   "Amy",
+   "Steve",
+   "Gary"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " garden",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 93,
+  "split": "heldout",
+  "names": [
+   "Alex",
+   "Dan",
+   "Simon"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 94,
+  "split": "heldout",
+  "names": [
+   "Rose",
+   "Chris",
+   "Luke"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " garden",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 95,
+  "split": "heldout",
+  "names": [
+   "Maria",
+   "Martin",
+   "Nick"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 96,
+  "split": "heldout",
+  "names": [
+   "Greg",
+   "Hannah",
+   "Sandra"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 97,
+  "split": "heldout",
+  "names": [
+   "Matt",
+   "Patricia",
+   "Ellen"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 98,
+  "split": "heldout",
+  "names": [
+   "Jim",
+   "Robert",
+   "Ray"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 99,
+  "split": "heldout",
+  "names": [
+   "Richard",
+   "Jake",
+   "Jacob"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 100,
+  "split": "heldout",
+  "names": [
+   "Harry",
+   "Jack",
+   "Barbara"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 101,
+  "split": "heldout",
+  "names": [
+   "Megan",
+   "Roger",
+   "Jessica"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 102,
+  "split": "heldout",
+  "names": [
+   "Ian",
+   "Diana",
+   "Emily"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " bag"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 103,
+  "split": "heldout",
+  "names": [
+   "Ted",
+   "George",
+   "Grace"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " sent",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 104,
+  "split": "heldout",
+  "names": [
+   "Eric",
+   "Joe",
+   "Helen"
+  ],
+  "templates": [
+   [
+    "Once",
+    " came",
+    " beach",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 105,
+  "split": "heldout",
+  "names": [
+   "Andrew",
+   "Ruth",
+   "Steven"
+  ],
+  "templates": [
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 106,
+  "split": "heldout",
+  "names": [
+   "Scott",
+   "Tony",
+   "Leo"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 107,
+  "split": "heldout",
+  "names": [
+   "Joseph",
+   "Fred",
+   "Victoria"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " sent",
+    " cake"
+   ],
+   [
+    "While",
+    " came",
+    " house",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 108,
+  "split": "heldout",
+  "names": [
+   "Jeff",
+   "Pat",
+   "Mike"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " sent",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 109,
+  "split": "heldout",
+  "names": [
+   "Karen",
+   "Jason",
+   "Linda"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " library",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 110,
+  "split": "heldout",
+  "names": [
+   "Jordan",
+   "Charles",
+   "Nancy"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " market",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 111,
+  "split": "heldout",
+  "names": [
+   "Henry",
+   "Rachel",
+   "Max"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 112,
+  "split": "heldout",
+  "names": [
+   "Sean",
+   "Walter",
+   "Lucy"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 113,
+  "split": "heldout",
+  "names": [
+   "Kelly",
+   "Frank",
+   "Claire"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 114,
+  "split": "heldout",
+  "names": [
+   "William",
+   "Sharon",
+   "Brian"
+  ],
+  "templates": [
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 115,
+  "split": "heldout",
+  "names": [
+   "Julia",
+   "Jennifer",
+   "Kevin"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 116,
+  "split": "heldout",
+  "names": [
+   "Carl",
+   "Ben",
+   "Ryan"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " house",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 117,
+  "split": "heldout",
+  "names": [
+   "Kim",
+   "Tim",
+   "Sam"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 118,
+  "split": "heldout",
+  "names": [
+   "Oliver",
+   "Joyce",
+   "Thomas"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 119,
+  "split": "heldout",
+  "names": [
+   "Adam",
+   "Donna",
+   "Rebecca"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " sent",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 120,
+  "split": "heldout",
+  "names": [
+   "Gary",
+   "Chris",
+   "Thomas"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 121,
+  "split": "heldout",
+  "names": [
+   "Pat",
+   "Henry",
+   "Luke"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " brought",
+    " cake"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 122,
+  "split": "heldout",
+  "names": [
+   "Sam",
+   "Jack",
+   "William"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " library",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " passed",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 123,
+  "split": "heldout",
+  "names": [
+   "Jessica",
+   "Charles",
+   "Adam"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " drove",
+    " house",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 124,
+  "split": "heldout",
+  "names": [
+   "Sophie",
+   "Ben",
+   "Ryan"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " sent",
+    " hat"
+   ],
+   [
+    "While",
+    " drove",
+    " market",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 125,
+  "split": "heldout",
+  "names": [
+   "Harry",
+   "Tony",
+   "Rebecca"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 126,
+  "split": "heldout",
+  "names": [
+   "Walter",
+   "Oliver",
+   "Sharon"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 127,
+  "split": "heldout",
+  "names": [
+   "Jake",
+   "Richard",
+   "Martin"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 128,
+  "split": "heldout",
+  "names": [
+   "Jason",
+   "Arthur",
+   "Maria"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " sent",
+    " hat"
+   ],
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 129,
+  "split": "heldout",
+  "names": [
+   "Ruth",
+   "Alex",
+   "Helen"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 130,
+  "split": "heldout",
+  "names": [
+   "Amy",
+   "Carl",
+   "Diana"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 131,
+  "split": "heldout",
+  "names": [
+   "Joseph",
+   "Ted",
+   "Jacob"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 132,
+  "split": "heldout",
+  "names": [
+   "Megan",
+   "Emily",
+   "Scott"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 133,
+  "split": "heldout",
+  "names": [
+   "Frank",
+   "Ellen",
+   "Jim"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " office",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 134,
+  "split": "heldout",
+  "names": [
+   "Jennifer",
+   "Barbara",
+   "Carol"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " library",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 135,
+  "split": "heldout",
+  "names": [
+   "Sean",
+   "Kelly",
+   "Grace"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " garden",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 136,
+  "split": "heldout",
+  "names": [
+   "Rose",
+   "Hannah",
+   "Andrew"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " sent",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 137,
+  "split": "heldout",
+  "names": [
+   "Robert",
+   "Mike",
+   "Linda"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 138,
+  "split": "heldout",
+  "names": [
+   "Greg",
+   "Roger",
+   "Anne"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 139,
+  "split": "heldout",
+  "names": [
+   "Julia",
+   "Simon",
+   "Joyce"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " library",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 140,
+  "split": "heldout",
+  "names": [
+   "Jordan",
+   "Leo",
+   "Larry"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 141,
+  "split": "heldout",
+  "names": [
+   "Jeff",
+   "Dan",
+   "Ray"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " house",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 142,
+  "split": "heldout",
+  "names": [
+   "Matt",
+   "Donna",
+   "Fred"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 143,
+  "split": "heldout",
+  "names": [
+   "Sandra",
+   "Steven",
+   "George"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 144,
+  "split": "heldout",
+  "names": [
+   "Nick",
+   "Claire",
+   "Brian"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 145,
+  "split": "heldout",
+  "names": [
+   "Ian",
+   "Kevin",
+   "Tim"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 146,
+  "split": "heldout",
+  "names": [
+   "Victoria",
+   "Patricia",
+   "Rachel"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " house",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 147,
+  "split": "heldout",
+  "names": [
+   "Eric",
+   "Karen",
+   "Lucy"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " moved",
+    " library",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 148,
+  "split": "heldout",
+  "names": [
+   "Nancy",
+   "Joe",
+   "Edward"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 149,
+  "split": "heldout",
+  "names": [
+   "Max",
+   "Steve",
+   "Kim"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " passed",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 150,
+  "split": "heldout",
+  "names": [
+   "Harry",
+   "Eric",
+   "Karen"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 151,
+  "split": "heldout",
+  "names": [
+   "Jessica",
+   "Barbara",
+   "Andrew"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " letter"
+   ],
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 152,
+  "split": "heldout",
+  "names": [
+   "Dan",
+   "Ray",
+   "Scott"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " passed",
+    " gift"
+   ],
+   [
+    "While",
+    " drove",
+    " library",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 153,
+  "split": "heldout",
+  "names": [
+   "Rose",
+   "Robert",
+   "Diana"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " passed",
+    " cake"
+   ],
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 154,
+  "split": "heldout",
+  "names": [
+   "Gary",
+   "Larry",
+   "Jennifer"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 155,
+  "split": "heldout",
+  "names": [
+   "Rebecca",
+   "Maria",
+   "Walter"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " brought",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 156,
+  "split": "heldout",
+  "names": [
+   "Claire",
+   "Steve",
+   "Jason"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 157,
+  "split": "heldout",
+  "names": [
+   "Jordan",
+   "Emily",
+   "Max"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " sent",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " library",
+    " brought",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 158,
+  "split": "heldout",
+  "names": [
+   "Kelly",
+   "Julia",
+   "Richard"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " sent",
+    " bag"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 159,
+  "split": "heldout",
+  "names": [
+   "George",
+   "Megan",
+   "Ruth"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 160,
+  "split": "heldout",
+  "names": [
+   "Victoria",
+   "Thomas",
+   "Sam"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " drove",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 161,
+  "split": "heldout",
+  "names": [
+   "Tony",
+   "William",
+   "Rachel"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " library",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 162,
+  "split": "heldout",
+  "names": [
+   "Sharon",
+   "Jake",
+   "Alex"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 163,
+  "split": "heldout",
+  "names": [
+   "Patricia",
+   "Greg",
+   "Nick"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " sent",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 164,
+  "split": "heldout",
+  "names": [
+   "Charles",
+   "Steven",
+   "Roger"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " sent",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " office",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 165,
+  "split": "heldout",
+  "names": [
+   "Kim",
+   "Ian",
+   "Martin"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 166,
+  "split": "heldout",
+  "names": [
+   "Kevin",
+   "Betty",
+   "Matt"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " library",
+    " brought",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " moved",
+    " market",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 167,
+  "split": "heldout",
+  "names": [
+   "Frank",
+   "Jeff",
+   "Anne"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " beach",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 168,
+  "split": "heldout",
+  "names": [
+   "Brian",
+   "Hannah",
+   "Carol"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 169,
+  "split": "heldout",
+  "names": [
+   "Ellen",
+   "Pat",
+   "Arthur"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " sent",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 170,
+  "split": "heldout",
+  "names": [
+   "Nancy",
+   "Ted",
+   "Carl"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " brought",
+    " hat"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 171,
+  "split": "heldout",
+  "names": [
+   "Tim",
+   "Joe",
+   "Oliver"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " sent",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " letter"
+   ],
+   [
+    "While",
+    " came",
+    " garden",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 172,
+  "split": "heldout",
+  "names": [
+   "Jacob",
+   "Joyce",
+   "Jack"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " hat"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " beach",
+    " passed",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 173,
+  "split": "heldout",
+  "names": [
+   "Fred",
+   "Sandra",
+   "Ben"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " sent",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 174,
+  "split": "heldout",
+  "names": [
+   "Edward",
+   "Adam",
+   "Grace"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " library",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " drove",
+    " house",
+    " passed",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 175,
+  "split": "heldout",
+  "names": [
+   "Mike",
+   "Sean",
+   "Simon"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " office",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 176,
+  "split": "heldout",
+  "names": [
+   "Helen",
+   "Amy",
+   "Linda"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " brought",
+    " hat"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 177,
+  "split": "heldout",
+  "names": [
+   "Leo",
+   "Henry",
+   "Donna"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " market",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " garden",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 178,
+  "split": "heldout",
+  "names": [
+   "Luke",
+   "Jim",
+   "Chris"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " gift"
+   ],
+   [
+    "While",
+    " came",
+    " beach",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 179,
+  "split": "heldout",
+  "names": [
+   "Sophie",
+   "Joseph",
+   "Ryan"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " office",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 180,
+  "split": "heldout",
+  "names": [
+   "Matt",
+   "Joyce",
+   "Richard"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " market",
+    " passed",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " sent",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 181,
+  "split": "heldout",
+  "names": [
+   "Nancy",
+   "Kevin",
+   "Jake"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " sent",
+    " gift"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " sent",
+    " cake"
+   ],
+   [
+    "Once",
+    " drove",
+    " library",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 182,
+  "split": "heldout",
+  "names": [
+   "Sophie",
+   "Barbara",
+   "Max"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " sent",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 183,
+  "split": "heldout",
+  "names": [
+   "Ray",
+   "Harry",
+   "Dan"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " house",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 184,
+  "split": "heldout",
+  "names": [
+   "Betty",
+   "Lucy",
+   "Greg"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " house",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " library",
+    " sent",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 185,
+  "split": "heldout",
+  "names": [
+   "Edward",
+   "Gary",
+   "William"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " bag"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 186,
+  "split": "heldout",
+  "names": [
+   "Thomas",
+   "Victoria",
+   "Kim"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " house",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " brought",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 187,
+  "split": "heldout",
+  "names": [
+   "Andrew",
+   "Henry",
+   "Scott"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " library",
+    " brought",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " sent",
+    " letter"
+   ],
+   [
+    "Once",
+    " moved",
+    " library",
+    " brought",
+    " letter"
+   ]
+  ]
+ },
+ {
+  "draw": 188,
+  "split": "heldout",
+  "names": [
+   "Emily",
+   "Nick",
+   "Maria"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " letter"
+   ],
+   [
+    "While",
+    " moved",
+    " house",
+    " sent",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 189,
+  "split": "heldout",
+  "names": [
+   "Karen",
+   "Jennifer",
+   "Brian"
+  ],
+  "templates": [
+   [
+    "Once",
+    " drove",
+    " office",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " passed",
+    " cake"
+   ],
+   [
+    "Once",
+    " came",
+    " house",
+    " brought",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 190,
+  "split": "heldout",
+  "names": [
+   "Fred",
+   "Frank",
+   "Kelly"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " brought",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " brought",
+    " gift"
+   ]
+  ]
+ },
+ {
+  "draw": 191,
+  "split": "heldout",
+  "names": [
+   "George",
+   "Ben",
+   "Joseph"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " office",
+    " brought",
+    " cake"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " drove",
+    " garden",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 192,
+  "split": "heldout",
+  "names": [
+   "Luke",
+   "Steven",
+   "Steve"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " market",
+    " passed",
+    " gift"
+   ],
+   [
+    "Once",
+    " came",
+    " library",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " house",
+    " passed",
+    " bag"
+   ]
+  ]
+ },
+ {
+  "draw": 193,
+  "split": "heldout",
+  "names": [
+   "Jordan",
+   "Larry",
+   "Amy"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " office",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " hat"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " sent",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 194,
+  "split": "heldout",
+  "names": [
+   "Charles",
+   "Anne",
+   "Tony"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " passed",
+    " letter"
+   ],
+   [
+    "While",
+    " drove",
+    " garden",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " garden",
+    " brought",
+    " cake"
+   ]
+  ]
+ },
+ {
+  "draw": 195,
+  "split": "heldout",
+  "names": [
+   "Leo",
+   "Mike",
+   "Adam"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " garden",
+    " brought",
+    " cake"
+   ],
+   [
+    "While",
+    " came",
+    " market",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 196,
+  "split": "heldout",
+  "names": [
+   "Carol",
+   "Ian",
+   "Hannah"
+  ],
+  "templates": [
+   [
+    "While",
+    " came",
+    " garden",
+    " passed",
+    " key"
+   ],
+   [
+    "While",
+    " came",
+    " house",
+    " sent",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " garden",
+    " passed",
+    " key"
+   ]
+  ]
+ },
+ {
+  "draw": 197,
+  "split": "heldout",
+  "names": [
+   "Roger",
+   "Grace",
+   "Carl"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " beach",
+    " brought",
+    " letter"
+   ],
+   [
+    "Once",
+    " drove",
+    " market",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " moved",
+    " office",
+    " passed",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 198,
+  "split": "heldout",
+  "names": [
+   "Oliver",
+   "Sandra",
+   "Jeff"
+  ],
+  "templates": [
+   [
+    "While",
+    " drove",
+    " garden",
+    " brought",
+    " key"
+   ],
+   [
+    "While",
+    " drove",
+    " house",
+    " sent",
+    " key"
+   ],
+   [
+    "While",
+    " moved",
+    " beach",
+    " passed",
+    " hat"
+   ]
+  ]
+ },
+ {
+  "draw": 199,
+  "split": "heldout",
+  "names": [
+   "Donna",
+   "Helen",
+   "Patricia"
+  ],
+  "templates": [
+   [
+    "While",
+    " moved",
+    " garden",
+    " passed",
+    " key"
+   ],
+   [
+    "Once",
+    " came",
+    " beach",
+    " passed",
+    " bag"
+   ],
+   [
+    "Once",
+    " came",
+    " market",
+    " brought",
+    " gift"
+   ]
+  ]
+ }
+]

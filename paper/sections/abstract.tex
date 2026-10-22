@@ -1,0 +1,18 @@
+Interchange interventions test whether a network's internal states carry the variables an explanation assigns to
+them. They are usually run one variable at a time, although causal abstraction requires agreement under
+interventions on several variables at once. For alignments that map two variables to orthogonal subspaces at one
+site, we show that a joint interchange edit equals a single edit applied to the result of the other. A joint test
+can therefore reject an alignment that passes every single test only if both variables' single edits miss the natural
+states they simulate by enough to push the output's margin below zero; a first-order version of this condition needs
+only single queries. In transformers compiled with Tracr no alignment could fail only jointly. In small trained
+transformers and MLPs, only \TrnPerfectJointFailWord{} of the \TrnPerfect{} alignments that pass every single test fail a
+joint test, the first-order margin rule picks out all but one of them (post hoc), and at equal budgets joint tests
+detected fewer failing alignments than single tests drawn from the queries in which the swapped variable changes
+(\TrnContrastOneTwenty{} at 120 model calls). With the variables at different sites, joint tests did slightly better
+(\MsContrast). In GPT-2 Small and GPT-2 Medium on indirect-object identification, under a protocol whose predictions
+were hashed before any model was run, the prediction carried over from the small networks failed: joint tests detected
+far more failing alignments than the same single tests (\ContrastS{} and \ContrastM{} at 120 calls). The position
+subspace found by distributed alignment search also carries the names. Single queries whose donor keeps the position
+reveal this, and every joint query exposes it; against single tests that also draw those queries, the advantage of
+joint tests shrank to \ContrastAllS{} and \ContrastAllM. The \PerfectWordM{} GPT-2 Medium alignments that passed every
+single query all failed jointly, and the margin rule flagged all of them.

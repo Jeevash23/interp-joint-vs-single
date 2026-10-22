@@ -1,0 +1,150 @@
+\section{Study 1: compiled transformers}\label{sec:compiled}
+
+\subsection{Programs, alignments and labels}
+
+We compiled \CmpPrograms{} programs with Tracr \citep{lindner2023tracr}, \CmpPerFamily{} from each of two
+families. A \emph{lookup} program returns $T[a,b]$ for a random $3\times3$ table $T$ with values 0--4 and
+distinct rows and columns. An \emph{additive} program returns $A(a)+B(b)$, where $A$ and $B$ each map $\{0,1,2\}$
+to three distinct values from 1 to 10. Each network reads the sequence \texttt{[BOS, a, b, n]}; attention copies
+$a$ and $b$ to the last position, and the final MLP computes the output. The site is the residual stream at the
+last position after the final attention layer. The edited coordinates are those that carry $a$ and $b$ (one-hot
+for lookup, one scalar each for additive) and the three one-hot coordinates of the nuisance token, \CmpPoolLookup{}
+dimensions for lookup and \CmpPoolAdditive{} for additive. The final MLP reads neither the nuisance coordinates nor
+the categorical copies of $a$ and $b$ that additive networks also hold (its weights on them are exactly zero), so
+the output is a function of the edited coordinates. A seeded random rotation of these coordinates is applied before
+alignment and undone before the MLP, so that no alignment can use the compiler's axes; it is an exact change of
+basis. Lookup networks have two layers, residual width \CmpResidLookup{} and \CmpParamsLookup{} parameters;
+additive networks have three layers, width \CmpResidAdditive{} and \CmpParamsAdditive{} parameters. Every network
+computes its program on all 27 inputs, and an independent NumPy implementation reproduces the compiled residual
+stream to within \CmpNativeMax.
+
+Each program received the six alignments in \cref{tab:compiled}. Two are valid by construction: the compiler's
+own carrier coordinates, and the same with the nuisance contrasts added to $P_A$, which moves coordinates the MLP
+never reads. Two take the conditional-mean contrasts of each variable, over all 27 inputs or over the 12 inputs
+with $a,b\in\{0,1\}$. One is a distributed alignment search (DAS) rotation \citep{geiger2024das} trained on the 144
+single interchanges among those 12 inputs that change the swapped variable. The last is random. An alignment is
+labelled valid if every single edit sets the swapped variable's carrier to the donor's value and leaves the other
+carrier unchanged, checked over all 729 recipient--donor pairs per variable without running any test. This gave
+\CmpValid{} valid and \CmpInvalid{} invalid alignments. In the lookup family, two values of a variable fix only one
+of the two directions that separate its three values, so both restricted alignments miss the direction that
+distinguishes value 2. In the additive family each carrier is one-dimensional, two values determine it, and the
+restricted alignments are exact; there the DAS starting point, the restricted mean contrast, was already exact and
+the optimiser stopped before its first update. The compiler, full-mean and both restricted alignments of an
+additive program therefore coincide, and the \CmpCandidates{} alignments contain \CmpDistinct{} distinct ones
+(\CmpDistinctValid{} of the \CmpValid{} valid ones).
+
+By construction, then, every alignment is either exact, so that its single edits land on their targets up to
+coordinates the network ignores, or it misses a direction that single queries use: the restricted lookup alignments
+miss the direction that separates value 2, and random subspaces miss the carriers. An alignment of the second kind
+gives wrong outputs on the single queries that use the missing direction. No alignment can therefore fail only
+jointly, and Study~1 cannot test the condition of \cref{cor:irreducible}. What its census can do is explain why the
+frozen comparison of joint and single tests found no difference.
+\citet{vaidyanathan2026mediators} give a second reason why compiled networks show little interaction between edits:
+they are piecewise affine by construction, and the interaction term of activation patching vanishes to second order
+where the downstream map is locally affine. That reason alone leaves joint-only failures possible: the network of
+\cref{sec:theory} is piecewise affine too, and its joint queries fail through a unit that only joint edits switch
+on. In Study~1 the construction rules them out.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}l Y c c c c c c@{}}
+\toprule
+& & & \multicolumn{4}{c}{Fail some query of the census} & \\
+\cmidrule(lr){4-7}
+Alignment & Construction & Valid & all singles & minimal pairs & restricted & joint & Joint only \\
+\midrule
+\input{generated/table-compiled-candidates.tex}
+\end{tabularx}
+\caption{The six alignments of Study~1, with counts out of \CmpPerFamily{} lookup / \CmpPerFamily{} additive
+programs. \emph{Valid} is the exact label from the carrier equations. The census columns count alignments with at
+least one robust failure among all 1,458 single queries, the minimal-pair and restricted single panels, and all
+joint queries. No alignment fails a joint query while passing every single query. In the additive family the
+first five rows contain only two distinct alignments.}
+\label{tab:compiled}
+\end{table}
+
+The protocol, seeds and code of this study were frozen at \CmpFreezeTime, before the final programs were
+generated. Every alignment was scored by tests drawn from eight panels at budgets of 12, 24, 60 and 120 model
+calls:
+\begin{itemize}
+  \item restricted, full-domain and held-out single panels and the joint panel (\cref{sec:setting});
+  \item complement resampling: the components outside $P_A$ and $P_B$ are taken from a random donor and the
+  recipient's own output is predicted, the resampling ablation of causal scrubbing \citep{chan2022scrubbing};
+  \item raw state distance: a jointly edited state must equal its target natural state;
+  \item transported divergence: the difference between a jointly edited state and its target is added to a random
+  natural state, whose output must not change, after \citet[Appendix A.3]{grant2026divergent};
+  \item natural execution of the counterfactual inputs, which checks competence only.
+\end{itemize}
+The exhaustive census and the checks of \cref{sec:theory} are post hoc: they were added after the frozen results
+and are exact computations on the saved networks and alignments.
+
+\subsection{Results}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}l c c c@{}}
+\toprule
+Panel & Queries & Invalid accepted (of \CmpInvalid) & Valid accepted (of \CmpValid) \\
+\midrule
+\input{generated/table-compiled-panels.tex}
+\end{tabular}
+\caption{Frozen test decisions at 120 model calls per alignment. A test accepts an alignment if none of its sampled
+queries fails. Under the post-freeze rule that treats near-tied outputs as undecided, one rejection by restricted
+singles (of a random alignment) becomes undecided and nothing else changes. The valid alignments include the
+coinciding additive alignments of \cref{tab:compiled}.}
+\label{tab:compiled-panels}
+\end{table}
+
+\paragraph{The census confirms the construction.}
+The composition identity holds to \CmpIdentityMax. Every single edit of every valid alignment lands on its target
+apart from the nuisance coordinates the MLP ignores (largest coordinate difference \CmpValidOffMax), and every invalid
+alignment fails single queries, its worst single edit missing its target by a coordinate difference of at least
+\CmpInvalidOffMin. An alignment is valid exactly when it passes all 1,458 single queries (\CmpLabelsMatch{} of
+\CmpCandidates), and none fails a joint query while passing every single query (\cref{tab:compiled}). The
+\CmpIrreducible{} irreducible joint failures all belong to invalid alignments, which already fail single queries.
+
+\paragraph{The frozen comparisons agree with the census within sampling error.}
+Replaying each frozen panel's sampling rule \CmpSimReps{} times on the census, with queries shared by the alignments
+of a program as in the frozen run, all \CmpSimInside{} frozen counts of accepted invalid alignments fall within the
+central 95\% of the replayed counts. The \CmpSimTotal{} counts are seven panels at four budgets: every panel of
+\cref{tab:compiled-panels} except natural execution, which does not depend on the alignment. \Cref{fig:compiled}
+shows six of the seven; the seventh, raw state distance, accepted no invalid alignment at any budget. Each expected
+count below is a range: its lower end counts near-tied queries as failures and its upper end as passes. At 120 calls
+restricted singles were expected to accept \CmpRestrictedExpected{} invalid alignments and accepted
+\CmpRestrictedAccepted. The
+probability that any invalid alignment would survive 120 calls was \CmpSurviveSingle{} for full-domain singles,
+\CmpSurviveJoint{} for joint queries, \CmpSurviveHeldout{} for held-out singles, \CmpSurviveFaith{} for complement
+resampling and \CmpSurviveTransport{} for transported divergence. The frozen primary comparison, joint minus
+full-domain single acceptance at 120 calls, was zero; given the census, any other result had probability at most
+\CmpOtherResult. At 12 calls the joint test accepted \CmpJointTwelveObserved{} invalid alignments and full-domain
+singles \CmpSingleTwelveObserved, against expected values of \CmpJointTwelveExpected{} and
+\CmpSingleTwelveExpected; the difference is sampling variation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig-compiled-panels.pdf}
+\caption{Invalid alignments accepted by six of the seven replayed panels of Study~1 (of \CmpInvalid); raw state
+distance, not shown, accepted none at any budget. Grey band: central 95\% of
+\CmpSimReps{} replays of the panel's sampling rule on the census (from the 2.5\% quantile with ties counted as
+failures to the 97.5\% quantile with ties counted as passes). Line: expected number, averaging the two ways of
+counting ties. Points: the frozen decisions.}
+\label{fig:compiled}
+\end{figure}
+
+\paragraph{Restricted tests miss restricted alignments.}
+The \CmpRestrictedAlignments{} restricted lookup alignments pass all \CmpRestrictedQueries{} queries of the
+restricted single panel, which for the DAS alignments are exactly the queries they were trained on, and fail
+\CmpRateDasSingle\% (DAS; range \CmpRateDasSingleRange\%) and \CmpRateMeanSingle\% (mean contrasts;
+\CmpRateMeanSingleRange\%) of full-domain single queries; minimal pairs over the full domain catch every one of them.
+In program 10000, for example, the restricted mean alignment transfers only the contrast between $a=0$ and $a=1$:
+moving $a=0$ from donor $(0,1,1)$ into recipient $(2,1,0)$ leaves the $A$-carrier at \ExCarrierAfter{} instead of
+$(1,0,0)$, and the network returns 1 instead of $T[0,1]=2$. This is a known effect: an explanation fitted and checked
+on part of the input range need not hold beyond it \citep{friedman2024illusions,rai2026datadriven}.
+In the frozen tests, restricted singles accepted \CmpRestrictedAccepted{} of the \CmpInvalid{} invalid alignments (the
+\CmpRestrictedAlignments{} restricted ones and one random alignment), while full-domain, held-out and joint queries,
+complement resampling and transported divergence each rejected all \CmpInvalid{} and accepted all \CmpValid{} valid
+ones. Raw state distance rejected the \CmpRawFalseRejected{} valid alignments that also move the nuisance
+coordinates, a harmless divergence in the terms of \citet{grant2026divergent}; transported divergence accepted them.

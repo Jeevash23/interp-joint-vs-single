@@ -1,0 +1,31 @@
+{
+ "phase": "confirmation",
+ "eps": 0.001,
+ "queries": 31447,
+ "disagreements": [],
+ "max_abs_margin_difference": 0.00010266479837639508,
+ "joint_only_alignments": [],
+ "by_arm": {
+  "a": {
+   "queries": 6843,
+   "max_abs_margin_difference": 0.00010266479837639508,
+   "disagreements": 0
+  },
+  "c": {
+   "queries": 6426,
+   "max_abs_margin_difference": 9.606906497339196e-05,
+   "disagreements": 0
+  },
+  "a_end": {
+   "queries": 10769,
+   "max_abs_margin_difference": 5.257905473854407e-05,
+   "disagreements": 0
+  },
+  "b": {
+   "queries": 7409,
+   "max_abs_margin_difference": 5.778185317240059e-05,
+   "disagreements": 0
+  }
+ },
+ "passed": true
+}

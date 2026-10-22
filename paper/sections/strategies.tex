@@ -1,0 +1,66 @@
+\section{Targeted and margin-guided tests at small budgets (Studies 2 and 3)}\label{sec:strategies}
+
+This section is post hoc and exploratory: its tests were designed after the results of Studies~2 and~3 were known.
+For the full-domain DAS alignments of Studies~2 and~3, we computed from the censuses and the saved networks the expected
+share of alignments that each of six tests detects at 12 to 120 model calls, charging 3 calls per single query, 4 per
+joint query and 1 per gradient (\cref{tab:strategies}):
+\begin{itemize}
+  \item the alternating single test and the joint test of the frozen comparisons;
+  \item an adaptive single test, which alternates for the first four queries and then spends the rest on the variable
+  with more observed failures, alternating on ties;
+  \item the same with margins: after four queries without a failure, it spends the rest on the variable whose two
+  queries had the smaller mean margin;
+  \item an oracle-targeted single test, which spends every query on whichever variable fails more often, as a tester
+  could do only by knowing it in advance;
+  \item a margin-guided joint test, which draws joint-panel queries, runs the two single queries that each of them
+  reduces to together with the gradients that $\sigma$ needs, scores every joint-panel query that the drawn single
+  queries compose, and runs the top-scored ones. A candidate costs 8 calls in Study~2 (two single queries and two
+  gradients) and 7 in Study~3 (one gradient); at 120 calls the test draws \StTwoGuidedCandidates{} candidates and runs
+  \StTwoGuidedRuns{} joint queries in Study~2, and \StThreeGuidedCandidates{} and \StThreeGuidedRuns{} in Study~3. We
+  estimated it from \StReplicates{} simulated tests per alignment and budget, beside the same test with the
+  candidates run in random order.
+\end{itemize}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}l c c c c c c c c@{}}
+\toprule
+& \multicolumn{4}{c}{Study~2 (model calls)} & \multicolumn{4}{c}{Study~3 (model calls)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Test & 12 & 24 & 60 & 120 & 12 & 24 & 60 & 120 \\
+\midrule
+\input{generated/table-strategies.tex}
+\end{tabular}
+\caption{Expected share of the full-domain DAS alignments detected (post hoc). The adaptive single test that switches
+on observed failures is identical to the alternating test at every budget and is not shown. The margin-guided rows
+are means of \StReplicates{} simulated tests per alignment (standard error at most \StMaxSe).}
+\label{tab:strategies}
+\end{table}
+
+\paragraph{Adapting to observed failures changes nothing.}
+The adaptive single test can switch only after it has observed a failure, and a test that has observed a failure has
+already detected the alignment; its detection probability is therefore the alternating test's at every budget (the
+two agree to \StAdaptiveDiff). Adapting to margins can switch before any failure. In Study~3, where $B$ is the weaker
+variable, it raises the share detected from \StThreeAltTwentyFour{} to \StThreeAdaptMarginTwentyFour{} at 24 calls
+but lowers it from \StThreeAltOneTwenty{} to \StThreeAdaptMarginOneTwenty{} at 120 calls, because two queries per
+variable sometimes point to the wrong one; in Study~2 it changes almost nothing. Knowing the weaker variable in advance would help most:
+the oracle-targeted single test is the best single test in both studies, and in Study~3 the joint test comes close to
+it (\StThreeJointOneTwenty{} against \StThreeOracleOneTwenty{} at 120 calls), as the post hoc analysis of
+\cref{sec:multisite} leads one to expect. These tests only detect failures; for the failure rate
+itself, \citet{asiaee2026certified} gives confidence sequences that stay valid when a test stops early or, through
+importance weights, aims its queries at likely failures.
+
+\paragraph{Margin guidance does not pay at these budgets.}
+The margin-guided joint test detects fewer alignments than the alternating single test at every budget in both
+studies (\StTwoGuidedOneTwenty{} against \StTwoAltOneTwenty{} in Study~2 and \StThreeGuidedOneTwenty{} against
+\StThreeAltOneTwenty{} in Study~3, at 120 calls), and at most slightly more than the same test with its candidates
+in random order (\StTwoGuidedRandomOneTwenty{} and \StThreeGuidedRandomOneTwenty). On the joint-only alignments, which no
+single test can detect, the score does pick better candidates: at 120 calls the guided test detects
+\StTwoJoGuidedOneTwenty\% of Study~2's \StTwoJoCount{} joint-only DAS alignments and \StThreeJoGuidedOneTwenty\% of
+Study~3's \StThreeJoCount, against \StTwoJoGuidedRandomOneTwenty\% and \StThreeJoGuidedRandomOneTwenty\% with the
+candidates in random order. But a plain joint test, which runs 30 joint queries instead of a handful, detects \StTwoJoJointOneTwenty\% and
+\StThreeJoJointOneTwenty\%. Scoring a candidate costs more than running it (7 or 8 calls against 4), so at budgets of
+this size the score cannot save queries. It pays where the single census is taken anyway: then every joint query can
+be scored for the price of the single queries' gradients (\cref{sec:theory}).

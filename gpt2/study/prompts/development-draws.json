@@ -1,0 +1,770 @@
+[
+ {
+  "draw": 0,
+  "split": "development",
+  "names": [
+   "Laura",
+   "Bob",
+   "Tom"
+  ],
+  "templates": [
+   [
+    "When",
+    " went",
+    " park",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " went",
+    " store",
+    " handed",
+    " book"
+   ],
+   [
+    "After",
+    " ran",
+    " school",
+    " handed",
+    " ball"
+   ]
+  ]
+ },
+ {
+  "draw": 1,
+  "split": "development",
+  "names": [
+   "Anna",
+   "Sarah",
+   "Daniel"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " restaurant",
+    " handed",
+    " ball"
+   ],
+   [
+    "When",
+    " ran",
+    " restaurant",
+    " gave",
+    " cup"
+   ],
+   [
+    "After",
+    " ran",
+    " station",
+    " gave",
+    " ring"
+   ]
+  ]
+ },
+ {
+  "draw": 2,
+  "split": "development",
+  "names": [
+   "David",
+   "Peter",
+   "Lisa"
+  ],
+  "templates": [
+   [
+    "When",
+    " ran",
+    " school",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " walked",
+    " station",
+    " handed",
+    " ball"
+   ],
+   [
+    "After",
+    " ran",
+    " hospital",
+    " handed",
+    " drink"
+   ]
+  ]
+ },
+ {
+  "draw": 3,
+  "split": "development",
+  "names": [
+   "Kate",
+   "Jane",
+   "Paul"
+  ],
+  "templates": [
+   [
+    "When",
+    " ran",
+    " park",
+    " gave",
+    " ring"
+   ],
+   [
+    "After",
+    " walked",
+    " restaurant",
+    " handed",
+    " cup"
+   ],
+   [
+    "After",
+    " ran",
+    " school",
+    " handed",
+    " pen"
+   ]
+  ]
+ },
+ {
+  "draw": 4,
+  "split": "development",
+  "names": [
+   "Emma",
+   "Alice",
+   "James"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " station",
+    " gave",
+    " ball"
+   ],
+   [
+    "After",
+    " went",
+    " park",
+    " handed",
+    " pen"
+   ],
+   [
+    "After",
+    " went",
+    " hospital",
+    " handed",
+    " ring"
+   ]
+  ]
+ },
+ {
+  "draw": 5,
+  "split": "development",
+  "names": [
+   "Susan",
+   "John",
+   "Mark"
+  ],
+  "templates": [
+   [
+    "When",
+    " went",
+    " store",
+    " handed",
+    " ball"
+   ],
+   [
+    "When",
+    " went",
+    " station",
+    " handed",
+    " ring"
+   ],
+   [
+    "When",
+    " ran",
+    " park",
+    " gave",
+    " book"
+   ]
+  ]
+ },
+ {
+  "draw": 6,
+  "split": "development",
+  "names": [
+   "James",
+   "Tom",
+   "Michael"
+  ],
+  "templates": [
+   [
+    "When",
+    " went",
+    " school",
+    " gave",
+    " cup"
+   ],
+   [
+    "When",
+    " went",
+    " school",
+    " handed",
+    " pen"
+   ],
+   [
+    "When",
+    " ran",
+    " station",
+    " handed",
+    " drink"
+   ]
+  ]
+ },
+ {
+  "draw": 7,
+  "split": "development",
+  "names": [
+   "Laura",
+   "Susan",
+   "Mark"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " school",
+    " handed",
+    " cup"
+   ],
+   [
+    "After",
+    " walked",
+    " school",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " walked",
+    " school",
+    " gave",
+    " cup"
+   ]
+  ]
+ },
+ {
+  "draw": 8,
+  "split": "development",
+  "names": [
+   "Daniel",
+   "Peter",
+   "Lisa"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " station",
+    " handed",
+    " ball"
+   ],
+   [
+    "When",
+    " walked",
+    " restaurant",
+    " handed",
+    " pen"
+   ],
+   [
+    "After",
+    " ran",
+    " restaurant",
+    " gave",
+    " book"
+   ]
+  ]
+ },
+ {
+  "draw": 9,
+  "split": "development",
+  "names": [
+   "Mary",
+   "Sarah",
+   "Kate"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " park",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " went",
+    " park",
+    " gave",
+    " ring"
+   ],
+   [
+    "After",
+    " went",
+    " hospital",
+    " handed",
+    " drink"
+   ]
+  ]
+ },
+ {
+  "draw": 10,
+  "split": "development",
+  "names": [
+   "Alice",
+   "Paul",
+   "John"
+  ],
+  "templates": [
+   [
+    "When",
+    " went",
+    " store",
+    " handed",
+    " ring"
+   ],
+   [
+    "When",
+    " walked",
+    " store",
+    " gave",
+    " drink"
+   ],
+   [
+    "When",
+    " walked",
+    " station",
+    " gave",
+    " book"
+   ]
+  ]
+ },
+ {
+  "draw": 11,
+  "split": "development",
+  "names": [
+   "David",
+   "Anna",
+   "Bob"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " station",
+    " handed",
+    " ball"
+   ],
+   [
+    "After",
+    " walked",
+    " station",
+    " handed",
+    " book"
+   ],
+   [
+    "After",
+    " ran",
+    " store",
+    " gave",
+    " pen"
+   ]
+  ]
+ },
+ {
+  "draw": 12,
+  "split": "development",
+  "names": [
+   "Paul",
+   "Emma",
+   "Susan"
+  ],
+  "templates": [
+   [
+    "After",
+    " walked",
+    " store",
+    " gave",
+    " drink"
+   ],
+   [
+    "After",
+    " walked",
+    " hospital",
+    " handed",
+    " drink"
+   ],
+   [
+    "After",
+    " ran",
+    " park",
+    " gave",
+    " ball"
+   ]
+  ]
+ },
+ {
+  "draw": 13,
+  "split": "development",
+  "names": [
+   "John",
+   "Alice",
+   "Sarah"
+  ],
+  "templates": [
+   [
+    "When",
+    " went",
+    " park",
+    " gave",
+    " book"
+   ],
+   [
+    "When",
+    " ran",
+    " station",
+    " handed",
+    " book"
+   ],
+   [
+    "After",
+    " walked",
+    " hospital",
+    " gave",
+    " ring"
+   ]
+  ]
+ },
+ {
+  "draw": 14,
+  "split": "development",
+  "names": [
+   "Mary",
+   "David",
+   "Mark"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " park",
+    " gave",
+    " cup"
+   ],
+   [
+    "After",
+    " went",
+    " park",
+    " handed",
+    " ring"
+   ],
+   [
+    "After",
+    " ran",
+    " hospital",
+    " handed",
+    " book"
+   ]
+  ]
+ },
+ {
+  "draw": 15,
+  "split": "development",
+  "names": [
+   "Michael",
+   "Anna",
+   "Jane"
+  ],
+  "templates": [
+   [
+    "When",
+    " ran",
+    " station",
+    " handed",
+    " cup"
+   ],
+   [
+    "After",
+    " walked",
+    " restaurant",
+    " handed",
+    " ball"
+   ],
+   [
+    "After",
+    " ran",
+    " restaurant",
+    " handed",
+    " book"
+   ]
+  ]
+ },
+ {
+  "draw": 16,
+  "split": "development",
+  "names": [
+   "Kate",
+   "Peter",
+   "Tom"
+  ],
+  "templates": [
+   [
+    "When",
+    " ran",
+    " store",
+    " handed",
+    " cup"
+   ],
+   [
+    "When",
+    " ran",
+    " school",
+    " handed",
+    " ring"
+   ],
+   [
+    "After",
+    " walked",
+    " hospital",
+    " handed",
+    " book"
+   ]
+  ]
+ },
+ {
+  "draw": 17,
+  "split": "development",
+  "names": [
+   "Lisa",
+   "Bob",
+   "James"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " hospital",
+    " handed",
+    " pen"
+   ],
+   [
+    "After",
+    " walked",
+    " store",
+    " handed",
+    " ring"
+   ],
+   [
+    "After",
+    " walked",
+    " hospital",
+    " handed",
+    " pen"
+   ]
+  ]
+ },
+ {
+  "draw": 18,
+  "split": "development",
+  "names": [
+   "Susan",
+   "Lisa",
+   "Mary"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " hospital",
+    " handed",
+    " book"
+   ],
+   [
+    "When",
+    " ran",
+    " station",
+    " gave",
+    " cup"
+   ],
+   [
+    "After",
+    " went",
+    " school",
+    " handed",
+    " ball"
+   ]
+  ]
+ },
+ {
+  "draw": 19,
+  "split": "development",
+  "names": [
+   "Emma",
+   "John",
+   "Kate"
+  ],
+  "templates": [
+   [
+    "After",
+    " walked",
+    " park",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " walked",
+    " hospital",
+    " handed",
+    " pen"
+   ],
+   [
+    "After",
+    " ran",
+    " store",
+    " gave",
+    " ring"
+   ]
+  ]
+ },
+ {
+  "draw": 20,
+  "split": "development",
+  "names": [
+   "Michael",
+   "Sarah",
+   "Alice"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " restaurant",
+    " handed",
+    " ball"
+   ],
+   [
+    "After",
+    " went",
+    " park",
+    " gave",
+    " ring"
+   ],
+   [
+    "After",
+    " walked",
+    " station",
+    " handed",
+    " cup"
+   ]
+  ]
+ },
+ {
+  "draw": 21,
+  "split": "development",
+  "names": [
+   "James",
+   "Anna",
+   "Peter"
+  ],
+  "templates": [
+   [
+    "After",
+    " went",
+    " station",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " walked",
+    " school",
+    " handed",
+    " ring"
+   ],
+   [
+    "After",
+    " walked",
+    " restaurant",
+    " handed",
+    " cup"
+   ]
+  ]
+ },
+ {
+  "draw": 22,
+  "split": "development",
+  "names": [
+   "Mark",
+   "Bob",
+   "Paul"
+  ],
+  "templates": [
+   [
+    "When",
+    " went",
+    " station",
+    " gave",
+    " ball"
+   ],
+   [
+    "After",
+    " went",
+    " park",
+    " handed",
+    " pen"
+   ],
+   [
+    "After",
+    " walked",
+    " hospital",
+    " handed",
+    " cup"
+   ]
+  ]
+ },
+ {
+  "draw": 23,
+  "split": "development",
+  "names": [
+   "Tom",
+   "Jane",
+   "David"
+  ],
+  "templates": [
+   [
+    "When",
+    " walked",
+    " park",
+    " gave",
+    " book"
+   ],
+   [
+    "After",
+    " went",
+    " restaurant",
+    " handed",
+    " drink"
+   ],
+   [
+    "After",
+    " ran",
+    " park",
+    " handed",
+    " ball"
+   ]
+  ]
+ }
+]

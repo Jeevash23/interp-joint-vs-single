@@ -1,0 +1,98 @@
+\section{Discussion}\label{sec:discussion}
+
+\paragraph{What the four studies show together.}
+The composition identity says when a joint test can reject an alignment that \emph{every} single query accepts. It is
+silent on single tests that draw only some of the single queries. In the small networks of Studies~1--3 that
+distinction did little: joint-only failures were rare, and a joint test spent its budget less well than a single test
+drawn from the full-domain panel. In GPT-2 it decided the result. The full-domain panel holds the queries in which the
+swapped variable changes, which are also the queries DAS is trained on, and the position subspace that DAS finds in
+GPT-2 also moves name information. A full-domain position query cannot show this, because it changes the position at
+the same time; a position query whose donor keeps the position can, and so can every joint query, because its second
+donor's names arrive through the position subspace too. Most of the joint tests' advantage in Study~4 therefore comes
+from single queries that the prespecified comparison left out. Against single tests that include them the advantage
+shrinks to \ContrastAllS{} in GPT-2 Small at \Budget{} calls, and it stays positive. Most joint-panel failures in GPT-2
+are irreducible (\IrrShareS\% in GPT-2 Small and \IrrShareM\% in GPT-2 Medium, against \TrnIrrShare\% in Study~2),
+yet no GPT-2 Small alignment passes every single query, and rank-2 and rank-4 DAS, which fail none of the full-domain
+queries, fail the single position queries whose donor keeps the position.
+
+\paragraph{What to test.}
+For alignments of the kind studied here, six practical points follow.
+\begin{enumerate}
+  \item \emph{Test the input range the claim covers.} Alignments fitted on part of the range can pass every test
+  drawn from that part and fail elsewhere, as all restricted lookup alignments of Study~1 and most restricted DAS
+  alignments of Study~2 did. Where a few values already determine a variable's code, as in the additive programs,
+  restricted fitting does no harm, but a test confined to that range cannot show this.
+  \item \emph{Use donors that differ in more than the swapped variable.} A minimal pair cannot reveal an edit that
+  disturbs the other variable; in Study~2 minimal-pair tests detected fewer failing alignments than full-domain
+  single tests at each budget in \cref{fig:trained}b.
+  \item \emph{Include single queries in which the swapped variable keeps its value.} These queries check that an
+  intervention leaves the other variable alone, the isolation side of RAVEL's scores \citep{huang2024ravel}. In
+  Study~4 a test drawn only from the queries DAS is trained on accepted alignments that fail \RateUnchangedAS\% of the
+  position queries outside them. Joint queries are a cheap way to draw such queries, because every one of them changes
+  both variables, and at small budgets they detected the most failing alignments in GPT-2.
+  \item \emph{For orthogonal alignments at one site, use margins to find what joint tests can add beyond a complete
+  single test.} Where single edits land on their targets, joint tests are redundant (\cref{prop:redundant}), and
+  this can be checked. Approximate alignments essentially never land exactly; for them a joint query can fail only
+  where the other edit's miss is large compared with the margins of both single queries it reduces to
+  (\cref{prop:margin}). In Study~2 such failures were rare and sparse, and budget spent on joint queries detected
+  fewer failing alignments than the same budget spent on full-domain single queries (\TrnContrastOneTwenty{}
+  \TrnContrastOneTwentyCI{} at 120 calls). The signed first-order rule, computed from single queries and gradients
+  alone, flagged \TrnMbRuleFlagged{} of Study~2's \TrnPerfectJointFailWord{} joint-only alignments and, fixed in advance
+  and applied unchanged, all \MsPerfectJointFailWord{} of Study~3's (both computed post hoc); in Study~4 it flagged all
+  \PerfectWordM{} of GPT-2 Medium's and \DFlagged{} of the \DJointOnly{} joint-only alignments of arm d, with no false
+  flag. These counts are small, and the rule is meant only for alignments that pass their single queries, which in
+  GPT-2 are few. Because one gradient per single query serves all joint queries built on it, the rule is cheap once a
+  single census has been taken; at budgets of a few dozen queries it is not, and a joint test guided by it did worse
+  than a plain single test (\cref{sec:strategies}).
+  \item \emph{Where the variables sit at different sites, the reduction holds only through the upstream variable.} In
+  Study~3, joint tests then detected failing alignments slightly more often than alternating single tests
+  (\MsContrast{} \MsContrastCI{} at 120 calls), mostly, a post hoc analysis shows, because every joint query exercises
+  the downstream variable, the weaker one there; against single tests aimed at that variable the difference is
+  \MsMechWorse. MIB's alignment of the two IOI variables to whole attention heads of GPT-2 Small places them at
+  different sites, two of the position heads a layer below the token head \citep{mueller2025mib}, which is closer to
+  Study~3's setting. Under the counterfactual model of Study~4, however, the token head fails \HeadsRateB\% of its
+  token queries, so single and joint tests both detect every such alignment, and the comparison between them is
+  moot. This is a statement about that model of the task; MIB scores its IOI alignments differently.
+  \item \emph{Do not use distance from natural states as a validity test.} Edits that move directions the network
+  ignores are harmless, and raw distance rejected every valid alignment that made them.
+\end{enumerate}
+
+\paragraph{Overlapping subspaces.}
+\Cref{lem:composition} needs orthogonal projectors. Subspaces fitted one variable at a time need not be orthogonal,
+and then a joint intervention is not a composition of single ones and can expose interactions that single tests miss;
+the general theory therefore requires joint interventions \citep{geiger2025abstraction}. Study~4 measured this in two
+places. In Study~2's networks, separately fitted subspaces made joint-only failures three times as common as
+Study~2's orthogonal alignments did (\DShare\% against \DRefShare\%), and the overlap separated the joint-only ones
+(area under the ROC curve \DAuroc). In GPT-2 the separately fitted subspaces barely overlapped, and the joint failure
+rate even fell with the overlap (Spearman \SepSpearman), so in that model the leak of names into the position subspace,
+not the overlap, is what joint tests find. Invertible non-linear alignment maps that give each variable its own block
+of latent coordinates, such as those of \citet{sutter2025nonlinear}, satisfy the identity of \cref{lem:composition} in
+those coordinates, so \cref{prop:redundant,cor:irreducible} carry over to them; their difficulty is a different one,
+since maps that flexible can align a network with almost any algorithm.
+
+\paragraph{Limits.}
+\Cref{lem:composition} needs orthogonal projectors at a single site. For variables at different sites it holds in
+one direction only (\cref{rem:sites}), and Study~3 tests one pair of sites per architecture. The tasks of Studies~1--3
+have two variables with three values each and 27 inputs, which is what makes exhaustive censuses possible. With so few
+natural states an approximate edit essentially never lands on its target, so the redundancy check is informative only
+for exact alignments; in larger domains tests are sampled, and whether single edits land has to be estimated. The
+networks of Studies~1--3 are small: compiled networks give each variable its own coordinates by construction, and the
+trained ones learn from 27 inputs. In Study~2 the full-domain DAS alignments are scored on the queries they were
+trained on, so passing every single query measures their fit to those queries; refitted on half of them, they failed
+the held-out half slightly more often, which moved the comparison slightly further from joint tests (post hoc). In
+Study~3 the alignments at the MLP's second hidden layer were poor, so its estimate of the joint-only share rests on
+\MsPerfect{} alignments, all on additive tasks. Study~4 has one task, with two and three values per variable and
+\NTemplates{} templates per task. GPT-2 Small answered all \NPrompts{} prompts of only \GatePassedSmall{} of
+\GateDrawnSmall{} held-out tasks with the required margin, so its confirmation rests on the tasks it finds easiest, and
+on \GatePassedSmall{} rather than \NTasksConf{} tasks; GPT-2 Medium's rests on \NTasksMedium{}, set by the cost rule,
+and its alignments were trained with TF32 matrix products. Larger models and other tasks may behave differently. The
+size of the comparison at equal budgets depends on how queries are costed, and it answers which test to run on a fixed
+budget; the add-on comparison answers what a joint test adds to a single one. Study~1's labels are exact for one
+precise claim, and Studies~2--4 have no labels independent of the tests; none of the studies says which explanation
+of a network is the true one \citep{meloux2025identifiable,chen2026rome}. Finally, the census of Study~1, the analyses
+marked post hoc in Studies~2 and~3, including the margin analysis and the held-out split, the test strategies of
+\cref{sec:strategies}, and Study~4's comparison with all single queries and its verifier were added after the frozen
+results or the development results were known; they are computations on the saved networks and records and do not
+change any frozen decision (\cref{app:gpt2-verification}). Study~3's predictions were fixed before its networks
+existed and Study~4's before any model was run, but both studies were designed after the results of the studies before
+them.

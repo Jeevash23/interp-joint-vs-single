@@ -1,0 +1,167 @@
+\section{Study 4: GPT-2 on indirect-object identification}\label{sec:gpt2}
+
+Studies~1--3 use small networks and tasks with 27 inputs. Study~4 asks whether their results hold in a language model.
+It was designed after the results of Studies~1--3 were known. The protocol, the predictions and the prompt lists were
+hashed after the protocol was approved and before any model was run; a development phase followed, then a freeze of
+the protocol, code and development settings, then the held-out confirmation. Two amendments and one
+development-informed addendum were recorded before the data they concern (\cref{app:gpt2-history}).
+
+\subsection{Design and predictions}\label{sec:gpt2-design}
+
+\paragraph{Task and variables.} The task is indirect-object identification (IOI) in GPT-2
+Small~\citep{wang2023ioi}, with the two variables of the IOI causal model of the MIB benchmark~\citep{mueller2025mib}:
+the indirect object's position and its identity. For the results of Studies~1--3 to apply, every combination of
+values must be an ordinary prompt whose answer follows from the two variables. So the \emph{position} variable $a$ is
+which name repeats, with the first clause unchanged ($a=0$: the second name repeats, ABBA; $a=1$: the first repeats,
+BABA), and the \emph{token} variable $b$ is which ordered pair of a task's three names $(n_0,n_1,n_2)$ fills the first
+clause, $(n_b,n_{b+1})$. The answer is $n_{(a+b)\bmod 3}$, so it changes when either variable changes, as in the
+additive tasks of Studies~1--3. The nuisance is the template. A task is a name triple and \NTemplates{} templates,
+\NPrompts{} prompts of \NTokens{} tokens each, for example
+\begin{center}\small
+\begin{tabular}{@{}ccll@{}}
+\toprule
+$a$ & $b$ & Prompt & Answer \\
+\midrule
+0 & 0 & When Laura and Bob went to the park, Bob gave a book to & Laura \\
+1 & 0 & When Laura and Bob went to the park, Laura gave a book to & Bob \\
+0 & 1 & When Bob and Tom went to the park, Tom gave a book to & Bob \\
+\bottomrule
+\end{tabular}
+\end{center}
+Names and template words come from fixed lists, every item one GPT-2 token; development and held-out tasks share no
+name and no word. A task is used only if GPT-2 answers all \NPrompts{} prompts with a margin of at least
+\CompetenceMargin{} logit, the competence margin of Studies~2 and~3. Development used the first \NTasksDev{}
+development draws that passed, confirmation the first \NTasksConf{} held-out draws.
+
+\paragraph{Sites and alignments.} The primary arm (arm a) aligns both variables at one site: the residual stream
+after block $L$ at every position from the first name onward (\SiteDim{} numbers). This site carries everything the
+variables affect on the way to the output; the final position alone carries only part of it, because later
+name-mover heads read the name from the name positions. Per task it has five alignments: distributed alignment search
+(DAS) with rank 1, 2 or 4 per variable and $P_AP_B=0$ by construction, trained on the single queries in which the
+swapped variable changes; the conditional-mean contrasts of each variable, made orthogonal; and random orthogonal
+subspaces of rank 2. Three secondary arms use the final position alone after the same block (arm a$'$), the MIB
+assignment of position to heads 7.3, 7.9 and 8.6 and of token to head 8.10 at the final position (arm b), and
+subspaces fitted one variable at a time at arm a's site, which need not be orthogonal (arm c). A further arm (arm d)
+fits subspaces one variable at a time in Study~2's \TrnNetworks{} trained networks. The learning rate, number of DAS
+steps and layer were chosen on development tasks by fixed rules that use single queries only: GPT-2 Small's were
+learning rate \LrSmall, \StepsSmall{} steps and layer \LayerSmall{} (the latest of \CandSmall), with a tie band of
+\TieBand{} set from measured numerical noise.
+
+\paragraph{Queries, panels and costs.} Every alignment's census holds all \NSingle{} single queries (\NSinglePerVar{}
+per variable) and all \NJoint{} joint queries. A query passes if the predicted name's logit exceeds the larger of the
+other two names' logits by more than the tie band. The full-domain single panel holds the single queries in which the
+swapped variable changes (\NFullA{} for position, \NFullB{} for token), and a test drawn from it alternates the two
+variables; the joint panel holds the \NJointPanel{} joint queries in which both variables change. As in Studies~1--3,
+a single query costs \CostSingle{} model calls and a joint query \CostJoint, and the detection probabilities of
+\cref{sec:setting} are exact for a given task. The margin rule flags an alignment if any of its joint queries whose two
+reduced single queries pass has $\sigma>1$, and a joint failure is irreducible if both of those single queries pass.
+Intervals are 95\% bootstrap intervals over tasks (\NBoot{} resamples) or Clopper--Pearson intervals for shares.
+
+\paragraph{Predictions.} Three predictions, carried over from Studies~1--3, were hashed before any model was run.
+(1) Among alignments at one site that pass every single query, at most 10\% fail a joint query. (2) If any fails only
+jointly, the margin rule flags at least half of them and at most 10\% of the others, with an area under the ROC curve
+of at least 0.8. (3) Joint minus full-domain single detection at \Budget{} calls is negative, as it was in Study~2
+(\TrnContrastOneTwenty). The protocol needs at least 10 alignments that pass every single query to score predictions 1
+and 2. Further predictions concerned arms b, c and d. A bigger-model arm on GPT-2 Medium, added by an amendment before
+any of its computation, carried predictions 1--3 to that model (\cref{sec:gpt2-medium}).
+
+\subsection{Results}\label{sec:gpt2-results}
+
+Of the \GateDrawnSmall{} held-out draws, \GatePassedSmall{} passed GPT-2 Small's competence gate (in
+\GateWrongNamePctSmall\% of the failures GPT-2 preferred the wrong name on some prompt), so the GPT-2 Small
+confirmation rests on \GatePassedSmall{} tasks, as the protocol prescribes when fewer than \NTasksConf{} pass. GPT-2
+Medium's confirmation rests on \GatePassedMedium{} tasks (\cref{sec:gpt2-medium}). \Cref{tab:gpt2-onesite} gives the
+one-site results for both models and \cref{tab:gpt2-predictions} scores every prediction.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}Yrr@{}}
+\toprule
+& GPT-2 Small & GPT-2 Medium \\
+\midrule
+Confirmation tasks & \GatePassedSmall & \GatePassedMedium \\
+Alignments & \AlignS & \AlignM \\
+Alignments passing every single query & \PerfectS & \PerfectM \\
+\quad of which failing a joint query & -- & \JointOnlyM \\
+Joint minus full-domain single detection, \Budget{} calls & \ContrastS{}\ci{\ContrastCILoS}{\ContrastCIHiS} & \ContrastM{}\ci{\ContrastCILoM}{\ContrastCIHiM} \\
+Joint minus all-single detection, \Budget{} calls (addendum) & \ContrastAllS{}\ci{\ContrastAllCILoS}{\ContrastAllCIHiS} & \ContrastAllM{}\ci{\ContrastAllCILoM}{\ContrastAllCIHiM} \\
+DAS, full-domain single failure rate, position (\%) & \RateFullAS & \RateFullAM \\
+DAS, full-domain single failure rate, token (\%) & \RateFullBS & \RateFullBM \\
+DAS, position queries whose donor shares the position (\%) & \RateUnchangedAS & \RateUnchangedAM \\
+DAS, joint-panel failure rate (\%) & \RateJointS & \RateJointM \\
+Irreducible share of joint-panel failures (\%) & \IrrShareS & \IrrShareM \\
+\bottomrule
+\end{tabularx}
+\caption{Study~4, one site (arm a), confirmation tasks. Rates are means over the DAS alignments (ranks 1, 2 and 4).
+Detection differences are means over DAS alignments with 95\% bootstrap intervals over tasks; single tests alternate
+the two variables, at \CostSingle{} model calls per single query and \CostJoint{} per joint query.}
+\label{tab:gpt2-onesite}
+\end{table}
+
+\paragraph{Joint tests detect failures that the prespecified single tests miss.} At equal cost, a joint test of
+\Budget{} model calls detects far more failing alignments than a single test drawn from the full-domain panel, by
+\ContrastS{} in GPT-2 Small and \ContrastM{} in GPT-2 Medium (\cref{tab:gpt2-onesite}). The difference is positive at
+every budget, from \ContrastSAtTwelve{} at 12 calls in GPT-2 Small. Prediction 3, carried over from Study~2, expected
+the opposite sign, and does not hold, beyond sampling error, in either model.
+
+\paragraph{The position subspace carries name information.} DAS of rank 2 and 4 fails none of the full-domain single
+queries, the queries it is trained on, and rank 2 trained on half of them fails \SplitHeldOutS\% of the other half.
+These queries change the swapped variable. The single position queries whose donor has the recipient's own position
+but other names, which lie outside the full-domain panel, tell a different story: in GPT-2 Small rank-2 DAS fails
+\UnchRTwoS\% of them and rank-4 DAS \UnchRFourS\%, and the two fail \JointRTwoS\% and \JointRFourS\% of the joint panel.
+A joint query always brings a second donor's names into the recipient through the position subspace, so it meets this
+leak on every draw; a full-domain position query changes the position at the same time, and the leak goes unseen.
+Against single tests that draw from all single queries, which include the queries that reveal the leak, joint tests
+still detect more failing alignments, but by much less: \ContrastAllS{} in GPT-2 Small and \ContrastAllM{} in GPT-2
+Medium at \Budget{} calls, and \ContrastAllSAtTwelve{} in GPT-2 Small at 12 calls. This comparison was added after the
+development results were seen and is descriptive.
+
+\paragraph{Joint-only failures and the margin rule.} No GPT-2 Small alignment passes all \NSingle{} single queries;
+rank-2 DAS, the closest, fails at least \MinSingleFailRTwoS{} on every task. In GPT-2 Medium \PerfectWordM{} alignments
+pass every single query, all DAS of rank 2. That is fewer than the 10 the protocol needs, so predictions 1 and 2 are
+not testable in either model. What happened in GPT-2 Medium is still informative: all \PerfectWordM{} fail joint
+queries, between \MedJointFailMin{} and \MedJointFailMax{} of the \NJoint{} each, and the margin rule flags all
+\PerfectWordM. In Study~2, by contrast, \TrnPerfectJointFail{} of \TrnPerfect{} such alignments failed jointly.
+
+\paragraph{The final position and MIB's heads.} At the final position alone (arm a$'$), DAS fails \EndRateA\% of the
+position and \EndRateB\% of the token queries of the full-domain panel, as predicted: the name that is said is read
+from the name positions after this site. With MIB's assignment (arm b), \HeadsRateB\% of the token queries at head 8.10
+fail, against \HeadsRateA\% of the position queries at heads 7.3, 7.9 and 8.6: under the counterfactual model, head
+8.10 cannot change which name is said. Both tests then detect every arm-b alignment, so its contrast is zero, and
+prediction 4, that it would exceed arm a's, does not hold (arm a's is larger by
+\HeadsMinusOneAbs{}\ci{\HeadsMinusOneCILoAbs}{\HeadsMinusOneCIHiAbs}).
+
+\paragraph{Subspaces fitted one variable at a time.} At arm a's site in GPT-2 Small, separately fitted subspaces
+overlap little (median $\|P_AP_B\|$ \SepOverlapMedian, range \SepOverlapMin{} to \SepOverlapMax; prediction 5a holds),
+and their joint failure rate falls rather than rises with the overlap (Spearman \SepSpearman, interval
+\SepSpearmanCI; prediction 5b does not hold). In Study~2's \TrnNetworks{} networks (arm d), \DPerfect{} of \DAlign{}
+separately fitted alignments pass every single query, and \DJointOnly{} of these fail a joint query (\DShare\%;
+interval \DShareCI), against \TrnPerfectJointFail{} of \TrnPerfect{} (\TrnPerfectShare\%) for Study~2's orthogonal
+alignments; the overlap separates the joint-only ones with an area under the ROC curve of \DAuroc{} (interval
+\DAurocCI). Both predictions 6a and 6b hold beyond sampling error. The margin rule flags \DFlagged{} of the
+\DJointOnly{} and \DFlaggedOther{} of the other single-passing alignments.
+
+\subsection{GPT-2 Medium}\label{sec:gpt2-medium}
+
+On GPT-2 Medium the settings rules chose layer \LayerMedium, again the latest candidate, with the same learning rate
+and number of steps as GPT-2 Small. The cost rule of the amendment allowed \NTasksMedium{} confirmation tasks within
+the arm's budget, and the first \GatePassedMedium{} held-out draws to pass GPT-2 Medium's competence gate came from
+\GateDrawnMedium{} draws. The arm spent \ArmSpent{} in all. Its results are in \cref{tab:gpt2-onesite} and the
+paragraphs above.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}lUV@{}}
+\toprule
+& Prediction (hashed before any model was run) & Result \\
+\midrule
+\tableinput{generated/table-gpt2-predictions.tex}
+\bottomrule
+\end{tabularx}
+\caption{Study~4: every prediction, scored on the confirmation tasks. ``Beyond sampling error'' means that the whole
+95\% interval lies on the predicted side or, for a failed prediction, on the other side. GPT-2 Medium's predictions
+(1--3) were hashed with Amendment 2, before any of its computation.}
+\label{tab:gpt2-predictions}
+\end{table}

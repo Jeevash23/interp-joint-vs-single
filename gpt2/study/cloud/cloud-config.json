@@ -1,0 +1,27 @@
+{
+  "arm": "AI-10 bigger-model arm (PROTOCOL.md Section 16, Amendment 2)",
+  "app": "ai10-bigger",
+  "volume": "ai10-bigger",
+  "gpu": "H100",
+  "container": {"cpu": 4.0, "memory_mib": 32768},
+  "rates_usd_per_hour": {"H100": 3.95, "cpu_core": 0.0473, "memory_gib": 0.008},
+  "models": {
+    "gpt2": {"repo": "openai-community/gpt2", "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+             "safetensors_sha256": "248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707", "blocks": 12},
+    "gpt2-medium": {"repo": "openai-community/gpt2-medium", "revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da",
+                    "safetensors_sha256": "fc5a354a19255ad494f3d71549390baca1ccf61d1d822b9408971705c687c9cd", "blocks": 24},
+    "gpt2-large": {"repo": "openai-community/gpt2-large", "revision": "32b71b12589c2f8d625668d2335a01cac3249519",
+                   "safetensors_sha256": "5f47f3e12f91cd33b662ce7e433b6150ad5512b5884a2cee961b50e9c3bbebce", "blocks": 36}
+  },
+  "tokenizer_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+  "bigger_models": ["gpt2-medium", "gpt2-large"],
+  "candidate_layers": {"gpt2-medium": [13, 17, 19, 21], "gpt2-large": [20, 26, 29, 32]},
+  "arms": ["a"],
+  "heldout_split": false,
+  "train_tf32": true,
+  "reproduction": {"task": "000-Laura-Bob-Tom", "draw": 0, "alignment": "das_r2", "tolerance": 0.001},
+  "parity": {"float64_tolerance": 1e-8, "float32_tolerance": 0.001},
+  "timing_steps": 20,
+  "confirmation_containers": 4,
+  "budget": {"arm_stop_usd": 6.0, "large_rule_usd": 5.75, "month_cap_usd": 27.0, "minimum_confirmation_tasks": 20}
+}

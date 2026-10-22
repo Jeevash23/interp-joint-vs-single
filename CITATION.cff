@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the preprint (link to be added when it is posted) and this repository."
+title: "When can a joint intervention reject an alignment that single interventions accept? From small networks to GPT-2: code and results"
+abstract: "Asks when a joint interchange intervention can reject an alignment that single interventions accept, in compiled and small trained networks and in GPT-2 Small and GPT-2 Medium on indirect-object identification, with protocols and predictions frozen before the test runs."
+authors:
+  - family-names: Jeevash
+    given-names: Richard
+    orcid: "https://orcid.org/0009-0005-7812-0939"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Jeevash23/interp-joint-vs-single"
+keywords:
+  - mechanistic interpretability
+  - interchange interventions
+  - causal abstraction
+  - distributed alignment search
+  - GPT-2

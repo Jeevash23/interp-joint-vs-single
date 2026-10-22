@@ -1,0 +1,84 @@
+\section{Introduction}\label{sec:intro}
+
+Interchange interventions test whether a network's internal state carries the variables an explanation assigns to
+it. One runs the network on a recipient input, replaces the part of an internal state that is said to carry a
+variable with the corresponding part from a donor input, and checks that the output changes as the explanation
+predicts \citep{vig2020gender,geiger2021causal,wang2023ioi}. Causal abstraction makes the underlying claim exact:
+the explanation must agree with the network under every intervention on its variables, including interventions on
+several variables at once \citep{beckers2019abstracting,geiger2025abstraction}. In practice explanations are
+mostly scored one variable at a time, for example by single-variable interchange accuracy
+\citep{huang2024ravel,mueller2025mib}. Recent benchmarking work argues that interventions on several variables
+catch interactions that single checks miss \citep{meloux2026validating}. So when can a joint intervention reject
+an explanation that single interventions accept?
+
+We give a necessary condition for a common kind of explanation, an alignment that maps two variables to orthogonal
+linear subspaces at one site, as distributed alignment search produces \citep{geiger2024das}. A joint interchange
+edit is exactly a single edit applied to the result of the other single edit (\cref{lem:composition}). If the
+single edits of either variable reproduce the natural states of the inputs they simulate, every joint query is an
+ordinary single query, and a joint test cannot reject what single tests accept (\cref{prop:redundant}). A joint test
+can do so only where the single edits of both variables give the correct output without reproducing those natural
+states (\cref{cor:irreducible}): their effect is a dormant behavioural change in the sense of
+\citet{grant2026divergent}, invisible in a single test and revealed by the second edit. A small explicit network
+shows that this can happen. A quantitative version (\cref{prop:margin}) says how large the misses must be: a joint
+query differs from each single query it reduces to by part of the other edit's miss, and it can fail only if, in both
+orderings, that difference lowers the output's margin by more than the single query's own margin.
+
+We then examine four settings in which every single and joint intervention can be evaluated, because each task has
+a small finite domain. Study~1 revisits a frozen comparison of eight test panels on \CmpPrograms{} compiled
+transformers with exact validity labels, whose joint tests had shown no advantage over full-domain single tests.
+Study~2, frozen before its final networks were trained, repeats the analysis on \TrnNetworks{} small trained
+transformers and MLPs, where linear alignments are approximate. Study~3, whose two predictions were recorded before
+any of its networks existed, places the two variables at different sites, where the identity holds in one direction
+only. Study~4 asks whether the results hold in a language model: GPT-2 Small on indirect-object identification
+\citep{wang2023ioi}, with the two variables of the MIB benchmark's model of the task \citep{mueller2025mib}, the
+indirect object's position and its identity. Its protocol and predictions were hashed before any model was run, its
+settings were chosen on development names and templates, and its confirmation used held-out ones; an amendment,
+recorded before any of its computation, repeated the one-site arm in GPT-2 Medium. In all four studies we compute
+exactly how likely a test of a given budget is to detect a failing alignment.
+
+\paragraph{Findings.}
+\begin{itemize}
+  \item \emph{A necessary condition.} For orthogonal alignments at one site, a joint test can reject what single
+  tests accept only if both variables' single edits give correct outputs yet miss
+  the natural states they simulate, and only where the misses are large relative to the single queries' margins
+  (\cref{sec:theory}).
+  \item \emph{In compiled transformers, no alignment could fail only jointly.} Study~1's alignments are by
+  construction either exact or wrong on single queries. A post hoc census of all \CmpCandidates{} confirms this and
+  explains the frozen comparison's null result within sampling error; it cannot test the condition. The failures
+  that restricted single tests missed came from alignments fitted on part of the input range (\cref{sec:compiled}).
+  \item \emph{In small trained networks the condition holds wherever both variables change, yet joint-only failures
+  are rare.} In Study~2 no single edit that changes a variable reproduces a natural state exactly. Of the
+  \TrnPerfect{} alignments (out of \TrnCandidates) that pass every single query, \TrnPerfectJointFailWord{} fail a
+  joint query, each on fewer than 1\% of joint queries. Post hoc, the signed first-order margin rule, computed from
+  single queries alone, flags \TrnMbRuleFlagged{} of the seven and no other alignment (\cref{sec:trained}).
+  \item \emph{There, at the prespecified costs, joint tests detect fewer failing alignments than single tests.} With
+  three calls per single and four per joint query, joint minus single detection probability is
+  \TrnContrastOneTwenty{} \TrnContrastOneTwentyCI{} at 120 calls and \TrnContrastTwelve{} at 12; after a single test
+  of 120 calls, 120 more calls detect a further \TrnAddonJoint\% of the full-domain DAS alignments if spent on joint
+  queries and \TrnAddonSingle\% if spent on single queries (post hoc; \cref{sec:trained}).
+  \item \emph{With the variables at different sites, joint tests did slightly better, for a simple reason.} Both
+  predictions of Study~3 held on their estimates, and joint minus single detection at 120 calls is \MsContrast{}
+  \MsContrastCI. Post hoc, most of the gain comes from joint queries always exercising the downstream variable, which
+  was the weaker one. The margin rule, fixed on Study~2 and applied without change, flags exactly the
+  \MsPerfectJointFailWord{} alignments that fail only jointly (\cref{sec:multisite}).
+  \item \emph{In GPT-2, the prediction carried over from the small networks failed.} At one site, joint tests detect
+  far more failing alignments than single tests drawn from the full-domain panel, by \ContrastS{} in GPT-2 Small and
+  \ContrastM{} in GPT-2 Medium at 120 calls. The position subspace found by distributed alignment search also carries
+  the names: it fails \UnchRTwoS\% (rank 2) and \UnchRFourS\% (rank 4) of the single position queries whose donor keeps
+  the recipient's position, queries that the full-domain panel leaves out; every joint query carries such a donor.
+  Against single tests that also draw these queries, joint tests still detect more, by \ContrastAllS{} and
+  \ContrastAllM, a comparison added after the development results (\cref{sec:gpt2-results}).
+  \item \emph{In GPT-2, alignments that pass every single query are rare, and those that exist fail jointly.} None does
+  in GPT-2 Small. In GPT-2 Medium \PerfectWordM{} do, too few to score the prespecified predictions; all
+  \PerfectWordM{} fail joint queries, and the margin rule flags all of them.
+  \item \emph{Under the counterfactual model, MIB's token head fails almost every token query} (\HeadsRateB\% at head
+  8.10), and the final position alone fails about half of all single queries.
+  \item \emph{Subspaces fitted one variable at a time make joint-only failures more common} in Study~2's networks
+  (\DShare\% against \DRefShare\%), and their overlap predicts which; in GPT-2 the overlap is small, and joint failures
+  fall slightly as it grows.
+  \item \emph{At small budgets, guiding joint queries by the margin rule does not pay} in Studies~2 and~3 (post hoc;
+  \cref{sec:strategies}).
+\end{itemize}
+
+The results concern linear alignments at one site (two in Study~3), finite tasks with two variables, small networks
+and two GPT-2 models on one task. \Cref{sec:discussion} discusses what they imply for testing alignments.

@@ -1,0 +1,217 @@
+\section{When a joint test can reject what single tests accept}\label{sec:theory}
+
+\begin{lemma}[Composition]\label{lem:composition}
+If $P_A$ and $P_B$ are orthogonal projectors with $P_AP_B=0$, then for all inputs $r$, $s$ and $t$,
+\[
+  J(r,s,t) \;=\; \SA\bigl(\SB(z_r,t),\,s\bigr) \;=\; \SB\bigl(\SA(z_r,s),\,t\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+$\SA(\SB(z_r,t),s)=\SB(z_r,t)+(z_s-\SB(z_r,t))P_A=z_r+(z_t-z_r)P_B+(z_s-z_r)P_A-(z_t-z_r)P_BP_A$, and the last
+term vanishes because the projectors are symmetric, so $P_BP_A=(P_AP_B)^{\top}=0$. Exchanging the roles of $A$ and
+$B$ gives the second equality.
+\end{proof}
+
+A joint intervention is therefore a single intervention whose recipient is the output of another single
+intervention. Whether that recipient is the natural state it simulates decides whether the joint test can tell us
+anything new (\cref{fig:identity}). We say that the $B$-edits of an alignment land on their targets if
+$\SB(z_r,t)=z_{(a_r,b_t,n_r)}$ for every recipient $r$ and donor $t$.
+
+\begin{proposition}\label{prop:redundant}
+If the $B$-edits of an alignment land on their targets, then every joint query $(r,s,t)$ edits the site into the
+same state, and makes the same prediction, as the single $A$-query with recipient $r'=(a_r,b_t,n_r)$ and donor
+$s$. Hence an alignment that passes all 729 single $A$-queries passes every joint query, and one that passes every
+$A$-query of the full-domain single panel passes every query of the joint panel. The same holds with $A$ and $B$
+exchanged.
+\end{proposition}
+
+\begin{proof}
+By \cref{lem:composition}, $J(r,s,t)=\SA(z_{r'},s)$, which is the single $A$-query $(r',s)$. That query predicts
+the output of $(a_s,b_{r'},n_{r'})=(a_s,b_t,n_r)$, which is the joint prediction. If the joint query is in the joint
+panel, $a_s\ne a_r=a_{r'}$, so the single query is in the full-domain single panel.
+\end{proof}
+
+\begin{remark}\label{rem:null}
+The proposition survives edits that also move directions the downstream computation ignores. Suppose
+$\SB(z_r,t)=z_{r'}+\eta$ with $\eta$ in a subspace $N$ such that $g(w+\nu)=g(w)$ for every $w\in\R^d$ and
+$\nu\in N$, and $NP_A\subseteq N$. Then $J(r,s,t)=\SA(z_{r'},s)+\eta(I-P_A)$ with $\eta(I-P_A)\in N$, so the joint
+query and the single query $(r',s)$ produce the same output. In Study~1 the coordinates of the nuisance token, which
+the network never reads, form such a subspace for the projectors of every valid alignment.
+\end{remark}
+
+The proposition assumes that every $B$-edit lands. Applied to one joint query at a time, its argument says when a
+joint test can reject what single tests accept.
+
+\begin{corollary}\label{cor:irreducible}
+Suppose a joint query $(r,s,t)$ fails while the two single queries it reduces to pass: the $A$-query with
+recipient $(a_r,b_t,n_r)$ and donor $s$, and the $B$-query with recipient $(a_s,b_r,n_r)$ and donor $t$. Then both
+single edits miss their targets: $\SA(z_r,s)\ne z_{(a_s,b_r,n_r)}$ and $\SB(z_r,t)\ne z_{(a_r,b_t,n_r)}$, also up
+to a subspace $N$ as in \cref{rem:null} with $NP_A\subseteq N$ and $NP_B\subseteq N$. In particular, an alignment
+that passes all single queries and fails a joint query has, for both variables, single edits that give the
+correct output while missing their targets.
+\end{corollary}
+
+\begin{proof}
+Write $r'=(a_r,b_t,n_r)$ and suppose that $\SB(z_r,t)=z_{r'}+\eta$ with $\eta\in N$ ($\eta=0$ if the $B$-edit lands).
+Since $\SA(w,s)=w(I-P_A)+z_sP_A$ for every state $w$, \cref{lem:composition} gives
+$J(r,s,t)=\SA(z_{r'}+\eta,s)=\SA(z_{r'},s)+\eta(I-P_A)$, and $\eta(I-P_A)\in N$ because $NP_A\subseteq N$. The joint
+query therefore produces the output of the single query $(r',s)$, which predicts the same output, that of
+$(a_s,b_t,n_r)$. That single query passes, so the joint query passes too, contrary to the hypothesis. The same
+argument with $A$ and $B$
+exchanged, using $NP_B\subseteq N$, applies to $\SA(z_r,s)$ and the single query $((a_s,b_r,n_r),t)$. For the last
+statement, a failing joint query of an alignment that passes all single queries meets the hypothesis, and its edits
+$\SA(z_r,s)$ and $\SB(z_r,t)$ are those of the single queries $(r,s)$ and $(r,t)$, which pass.
+\end{proof}
+
+We call a joint failure of this kind \emph{irreducible}: it cannot be traced to a failing single query on a
+natural recipient. \citet{grant2026divergent} call intervened states that the network does not reach naturally
+\emph{divergent}, and a perturbation that is behaviourally null in some contexts but changes behaviour in others a
+\emph{dormant behavioural change}. The single edits of \cref{cor:irreducible} are of this kind: their effect is
+null in the single test and appears once the other variable has been edited. Their Theorem~A.2, which shows that a
+set of states is closed under patching subsets of coordinates exactly when it is the product of its coordinate
+ranges, is the closest formal precedent for the property used in \cref{prop:redundant}. The condition is necessary,
+not sufficient: single edits that miss their targets need not combine into a failure.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\small,
+    nat/.style={circle, fill=black, inner sep=1.6pt},
+    off/.style={circle, draw=black, thick, fill=white, inner sep=1.6pt},
+    region/.style={rounded corners=10pt, fill=gray!12, draw=gray!55},
+    note/.style={gray!60!black, font=\footnotesize}]
+  % (a) B-edits land on natural states
+  \begin{scope}
+    \draw[region] (0,0) rectangle (5.0,1.5);
+    \node[note, anchor=south west] at (0.12,0.08) {natural states};
+    \node[nat] (r) at (0.55,0.85) {};
+    \node[anchor=east] at (r.west) {$z_r$};
+    \node[nat] (rp) at (3.7,0.85) {};
+    \node[anchor=north, font=\footnotesize] at ([yshift=-1pt]rp.south) {$z_{(a_r,b_t,n_r)}$};
+    \node[off] (j) at (3.7,2.75) {};
+    \node[anchor=west] at ([xshift=2pt]j.east) {$J(r,s,t)$};
+    \draw[->, thick] (r) -- node[above, font=\footnotesize] {$B$ from $t$} (rp);
+    \draw[->, thick] (rp) -- node[right, font=\footnotesize] {$A$ from $s$} (j);
+    \node[align=center, font=\footnotesize, anchor=north] at (2.5,-0.25)
+      {(a) the $B$-edit lands on its target:\\ the joint query is the single $A$-query $((a_r,b_t,n_r),\,s)$};
+  \end{scope}
+  % (b) both single edits leave the natural states
+  \begin{scope}[xshift=8.2cm]
+    \draw[region] (0,0) rectangle (5.0,1.5);
+    \node[note, anchor=south east] at (4.9,0.08) {natural states};
+    \node[nat] (r) at (1.2,0.75) {};
+    \node[anchor=north east] at (r.south west) {$z_r$};
+    \node[off] (sa) at (0.45,2.6) {};
+    \node[anchor=east] at ([xshift=-2pt]sa.west) {$\SA(z_r,s)$};
+    \node[off] (sb) at (4.3,2.15) {};
+    \node[anchor=west] at ([xshift=2pt]sb.east) {$\SB(z_r,t)$};
+    \node[off] (j) at (2.9,3.25) {};
+    \node[anchor=south] at ([yshift=2pt]j.north) {$J(r,s,t)$};
+    \draw[->, thick] (r) -- node[left, font=\footnotesize, pos=0.7] {$A$ from $s$} (sa);
+    \draw[->, thick] (r) -- node[below right, font=\footnotesize, pos=0.5, inner sep=1pt] {$B$ from $t$} (sb);
+    \draw[->, thick, dashed] (sa) -- (j);
+    \draw[->, thick, dashed] (sb) -- (j);
+    \node[align=center, font=\footnotesize, anchor=north] at (2.5,-0.25)
+      {(b) both single edits miss their targets:\\ the joint query is not a single query on a natural recipient};
+  \end{scope}
+\end{tikzpicture}
+\caption{By \cref{lem:composition}, a joint edit is a single edit applied to the result of the other single
+edit. (a) If the $B$-edit of $z_r$ lands on its target, the natural state of the input it simulates, the joint
+query coincides with an ordinary single query (\cref{prop:redundant}). (b) A joint query can only fail where the
+single queries it reduces to pass if both single edits miss their targets (\cref{cor:irreducible}). Filled dots are natural states; open dots are edited states.}
+\label{fig:identity}
+\end{figure}
+
+\paragraph{The condition can be met.}
+A small explicit network, built on the mechanism of the example of \citet[Section~4.2]{grant2026divergent} (a unit
+that is silent on every natural state), shows that joint tests can reject an alignment that every single test
+accepts. The target is $y=a+b$. The site has four coordinates $z=(u_a,u_b,e_A,e_B)$ with natural value
+$(a,b,0,0)$, and the readout is the two-layer ReLU network
+\[
+  g(z) \;=\; u_a+u_b+\tan\theta\,(e_A+e_B)-k\,\mathrm{relu}\bigl(|e_A|+|e_B|-\tau\bigr),\qquad
+  |e|=\mathrm{relu}(e)+\mathrm{relu}(-e),
+\]
+with $\tau=2.5\sin\theta\cos\theta$ and $k=1/(\sin\theta\cos\theta)$, so that $g(z_x)=a+b$ on every natural state.
+The alignment places $A$ on $v_A=(\cos\theta,0,\sin\theta,0)$ and $B$ on $v_B=(0,\cos\theta,0,\sin\theta)$. A single
+$A$-edit with $\Delta a=a_s-a_r$ moves $u_a$ by $\Delta a\cos^2\theta$ and $e_A$ by $\Delta a\sin\theta\cos\theta$; the
+readout recombines the two into $a_s$ exactly, and $|e_A|\le 2\sin\theta\cos\theta<\tau$ keeps the last unit silent.
+Every single query therefore passes, although every edit that changes a variable misses its target. A joint edit
+with $|\Delta a|+|\Delta b|\ge 3$ switches the last unit on and is wrong by at least 0.5. For any
+$0^\circ<\theta<90^\circ$ (we use $\theta=\ExTheta^\circ$), none of the \ExSingleQueries{} single queries fails,
+while \ExJointFailures{} of the \ExJointQueries{} joint queries do (\ExJointShare\%), all of them in the joint panel
+(\ExPanelShare\% of it). If only $v_A$ is tilted and $v_B=(0,1,0,0)$, the $B$-edits land on their targets and no
+joint query fails, as \cref{prop:redundant} requires.
+
+\paragraph{How far a missed target can move the output.}
+\Cref{prop:redundant} needs the edits of one variable to land exactly. A quantitative version says how far they may
+miss. For a state $w$ at the site and a query that predicts class $c$, let the \emph{margin} $\mu_c(w)$ be the logit
+of $c$ minus the largest other logit, so that the query passes when $\mu_c(w)>10^{-4}$. Write $r'=(a_r,b_t,n_r)$ and
+$r''=(a_s,b_r,n_r)$ for the recipients of the two single queries that a joint query $(r,s,t)$ reduces to. By
+\cref{lem:composition},
+\begin{equation}\label{eq:split}
+  J(r,s,t)=\SA(z_{r'},s)+u_A=\SB(z_{r''},t)+u_B,
+\end{equation}
+where $u_A=\bigl(\SB(z_r,t)-z_{r'}\bigr)(I-P_A)$ and $u_B=\bigl(\SA(z_r,s)-z_{r''}\bigr)(I-P_B)$: the joint state is
+the state of either reduced single query, moved by the part of the other edit's miss that lies outside the reduced
+query's own subspace.
+
+\begin{proposition}\label{prop:margin}
+The joint query $(r,s,t)$ and the two single queries $(r',s)$ and $(r'',t)$ predict the same class $c$. Let
+$\mu_A=\mu_c(\SA(z_{r'},s))$ and $\mu_B=\mu_c(\SB(z_{r''},t))$ be the margins of the two single queries and
+$\Delta_A=\mu_c(J(r,s,t))-\mu_A$ the change from the first to the joint query.
+\begin{enumerate}[label=(\alph*)]
+  \item If $\mu_c$ is differentiable at $\SA(z_{r'},s)$, then $\Delta_A=\nabla\mu_c(\SA(z_{r'},s))\cdot u_A+o(\|u_A\|)$.
+  \item If $\mu_c$ is Lipschitz with constant $L$, then $|\Delta_A|\le L\|u_A\|$, and the joint query passes whenever
+  $\mu_A-L\|u_A\|>10^{-4}$.
+\end{enumerate}
+The same holds for $\Delta_B=\mu_c(J(r,s,t))-\mu_B$ and $u_B$. Hence a joint query whose two single queries pass can
+fail only if $\Delta_A<-\mu_A-10^{-4}$ and $\Delta_B<-\mu_B-10^{-4}$: in both orderings, the other edit's miss must
+lower the margin by more than the single query's own margin.
+\end{proposition}
+
+\begin{proof}
+All three queries predict the output of $(a_s,b_t,n_r)$. By \cref{eq:split}, $\mu_c(J(r,s,t))=\mu_c(\SA(z_{r'},s)+u_A)$,
+so (a) is Taylor's theorem along $u_A$ and (b) the Lipschitz property. The joint query fails if
+$\mu_c(J(r,s,t))<-10^{-4}$, which is $\Delta_A<-\mu_A-10^{-4}$, and equally $\Delta_B<-\mu_B-10^{-4}$.
+\end{proof}
+
+\Cref{prop:redundant} is the case $u_A=0$. \Cref{prop:margin} turns the check into a number that can be computed for
+every joint query from the two single queries it reduces to. Only a drop of margin can make a joint query fail where
+its single queries pass, so the score is the first-order estimate of the smaller of the two relative drops,
+\[
+  \sigma(r,s,t)=\min\Bigl(-\frac{\nabla\mu_c\cdot u_A}{\mu_A},\ -\frac{\nabla\mu_c\cdot u_B}{\mu_B}\Bigr),
+\]
+with each gradient taken at the state of its single query. An irreducible failure needs both actual relative drops to
+exceed 1, and the rule $\sigma>1$ flags the joint queries for which both first-order estimates do. The unsigned score
+$\rho$, the smaller of $|\nabla\mu_c\cdot u_A|/\mu_A$ and $|\nabla\mu_c\cdot u_B|/\mu_B$, measures the size of the
+change whatever its direction. For an MLP readout $g(w)=\mathrm{relu}(wW_2+b_2)W_3+b_3$, the difference between the
+logits of classes $c$ and $c'$ is Lipschitz with constant $\|W_2\|_2\,\|W_3(e_c-e_{c'})\|$, so (b) holds with
+$L=\|W_2\|_2\max_{c\ne c'}\|W_3(e_c-e_{c'})\|$. LayerNorm leaves transformers without a useful global constant, and
+for them only (a) applies.
+
+\paragraph{What the score costs.}
+The score needs the margin and its gradient at each single query, and both serve every joint query built on that single query: in the domains of Studies~1--3, each of the 1,458 single queries is one of the two single queries of 27 joint queries. Given the
+single queries' margins, which a single test computes anyway, scoring all \ExJointQueries{} joint queries therefore
+takes 1,458 gradients, which we charge at one model call each; the vectors $u_A$ and $u_B$, which come from natural
+states and projectors without running the network; and two dot products of length $d$ per joint query,
+\CostDotProducts{} in all. Running the joint queries instead takes \CostJointCalls{} model calls at four per query. The
+8,748 queries of the joint panel need only the 972 single queries of the full-domain panel and their gradients.
+
+\begin{remark}[Variables at different sites]\label{rem:sites}
+Suppose $A$ is aligned at a site upstream of $B$'s, with natural states $z^A_x$ and $z^B_x$ at the two sites. A single
+$A$-query edits $A$'s site and lets the network run on; a joint query $(r,s,t)$ does the same and then replaces the
+$B$-component of the state $w$ that reaches $B$'s site, giving $w+(z^B_t-w)P_B$. If the $A$-edit lands on its
+target, $w=z^B_{r''}$ and the joint query is the single $B$-query $(r'',t)$, as in \cref{prop:redundant}. There is no
+reduction through $B$, because the $B$-edit acts on a state that the $A$-edit has already changed, and only one form
+of \cref{eq:split} survives: the joint state is $\SB(z^B_{r''},t)+(w-z^B_{r''})(I-P_B)$. A joint failure whose single
+queries $(r'',t)$ and $(r,s)$ both pass therefore needs only the $A$-edit to miss its target. Study~3
+(\cref{sec:multisite}) asks whether this makes joint-only failures more common.
+\end{remark}
+
+\paragraph{What this means for testing.}
+\Cref{prop:redundant} gives a condition under which joint tests are redundant that can be checked directly: do the
+single edits land on their targets, up to directions the downstream computation ignores? For exact alignments, as
+in Study~1, the check settles the question. Approximate alignments essentially never reproduce natural states
+exactly. For them \cref{prop:margin} replaces the check with a margin condition: a joint query can fail only where
+the other edit's miss is large compared with the margins of both single queries it reduces to. How often that happens,
+and whether $\sigma$ finds the queries where it does, are empirical questions, which Studies~2--4 address.
