@@ -13,9 +13,11 @@ claim about that variable with the others marginalised \citep{geiger2022iit}. DA
 the causal-variable track of MIB \citep{mueller2025mib} and the cause and isolation scores of RAVEL
 \citep{huang2024ravel}. RAVEL scores an alignment both by whether an intervention changes the target attribute and by
 whether it leaves the other attributes alone; the single queries in which the swapped variable keeps its value, which
-turn out to matter in Study~4, are a test of the second kind. MIB's IOI model assigns the position variable to heads
-7.3, 7.9 and 8.6 and the token variable to head 8.10 of GPT-2 Small; Study~4 tests that assignment under our
-counterfactual model rather than under MIB's own scoring. For orthogonal linear alignments at one site,
+turn out to matter in Study~4, are a test of the second kind. MIB's IOI model defines the position and token variables
+but does not assign them to heads; the heads come from MIB's baseline alignment, a brute-force search over the heads
+of \citet{wang2023ioi} for its Full Vector baseline, which places the position variable at heads 7.3, 7.9 and 8.6 and
+the token variable at head 8.10 of GPT-2 Small. Study~4 tests that assignment under our counterfactual model rather
+than under MIB's own scoring. For orthogonal linear alignments at one site,
 \cref{prop:redundant} says when the multi-variable requirement adds nothing beyond single-variable tests over the full
 domain. \citet{geiger2021causal} remark informally that single interchanges establish the abstraction of their
 example, whose two variables occupy different neurons of one hidden layer and are therefore orthogonal subspaces of
