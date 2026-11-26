@@ -72,7 +72,7 @@ networks, Study 4's unit tests, model downloads for reruns) are run inside each 
 
 ## Licence
 
-MIT (`LICENSE`), covering the code and the studies' records and saved outputs; each part carries the same file.
+MIT (`LICENSE`), covering the code and the studies' records and saved outputs; each part carries the same file. Model weights, tokenisers and packages are not included and keep their own licences.
 
 ## Study codes
 
